@@ -1,31 +1,42 @@
-include karax / prelude
+import karax / [karax, vdom, karaxdsl]
 import pages / [index, articles, about, contact, projects, stats]
+import components / [navigation, footer]
 
 
+# data
+var 
+    Github: stats.Githost
+    Gitlab: stats.Githost
+    Gitea: stats.Githost
+
+Github = Githost(name: "Github", repos: @[], stars: 0, commits: 0)
+
+# types
 type
   Show = enum
-    index, articles, about, contact, projects, stats
+    rindex, rarticles, rabout, rcontact, rprojects, rstats
 var show: Show
 
+# functions
 proc createDom(data: RouterData): VNode =
-  if data.hashPart == "#/": show = index
-  elif data.hashPart == "#/articles": show = articles
-  elif data.hashPart == "#/about": show = about
-  elif data.hashPart == "#/contact": show = contact
-  elif data.hashPart == "#/projects": show = projects
-  elif data.hashPart == "#/github-stats": show = stats
+  if data.hashPart == "#/": show = rindex
+  elif data.hashPart == "#/articles": show = rarticles
+  elif data.hashPart == "#/about": show = rabout
+  elif data.hashPart == "#/contact": show = rcontact
+  elif data.hashPart == "#/projects": show = rprojects
+  elif data.hashPart == "#/stats": show = rstats
   
   result = buildHtml(tdiv(class="portfolio-wrapper")):
-    head(class = "")
+    # add some links to css files
     section(class = "portfolio"):
       makeNavigation(data)
       let route = case show:
-        of index: index()
-        of articles: articles()
-        of about: about()
-        of contact: contact()
-        of projects: projects()
-        of stats: Stats()
-        route()
+        of rindex: index.index()
+        of rarticles: articles.articles()
+        of rabout: about.about()
+        of rcontact: contact.contact()
+        of rprojects: projects.projects()
+        of rstats: stats.stats(Github)
+      route
       makeFooter()
 setRenderer createDom
