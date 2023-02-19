@@ -2,3 +2,8 @@
 # When showcasing my work, presentation is the central theme
 # The key point is to demonstrate my skills and ambition
 
+import karax / [vdom, karaxdsl]
+
+proc projects*(): VNode = 
+    result = buildHtml(tdiv):
+        p: text "I am the projects now"
