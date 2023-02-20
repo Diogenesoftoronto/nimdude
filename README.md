@@ -1,8 +1,12 @@
 # Nimdude
 
-Nimdude is a personal site built with [Nim](https://nim-lang.org/) and Go (for the backend). It's a site that uses [Prologue](https://planety.github.io/prologue/) to generate pages, routing and views. And it uses karax as a frontend ui library. It's a work in progress, but it's a good example of how to use Prologue and Karax together.
+Nimdude is a personal site built with [Nim](https://nim-lang.org/) and Go (for the backend). It uses [karax](https://github.com/karaxnim/karax) as a frontend ui library. It's a work in progress, but it's a good example of how to use Go and Karax together.
 
- The site showcases my skills as a software engineer specializing in Go backend development, as well as my interests in politics, philosophy, and VR.
+I initially started this project with using prologue but I decided against as server side generation of code is not what I am looking for. Instead I am going to be using karax to generate the html, and the nim rst2html library to generate the blog posts. I will also be using the nimble package manager to manage the dependencies. I will then use a Go backend to serve the static files and handle the api calls. Probably with encore as that is what I am currently using but I am considering just using the standard http library. Especially as I am not using any of the special features of encore for this project. I want to get more familiar with using the standard library and the basics. I can always continue using encore later.
+
+The same is the case for creating dockerfiles. I initially thought of doing so using Dagger, but I found this to be a bit difficult and maybe overkill for this project. A normal dockerfile generate via go should be fine and I can always use Dagger later aswell.
+
+The current plan is to take the generated rst2html and then pipe that through the html2karax to generate the karax code. I will then use the karax code to generate the html. If that sounds convulted and unnecessary it makes more sense if you think of it like taking a static base and adding the dynamic content to it later. I am not sure if this is the best way to do it, but it is the way I am going to do it for now. I will probably change it later.
 
 ## Movitivation
 
