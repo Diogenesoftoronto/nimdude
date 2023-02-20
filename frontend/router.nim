@@ -6,8 +6,8 @@ import components / [navigation, footer]
 # data
 var 
     Github: stats.Githost
-    Gitlab: stats.Githost
-    Gitea: stats.Githost
+    # Gitlab: stats.Githost
+    # Gitea: stats.Githost
 
 Github = Githost(name: "Github", repos: @[], stars: 0, commits: 0)
 
