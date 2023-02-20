@@ -18,7 +18,7 @@ type
 var show: Show
 
 # functions
-proc createDom(data: RouterData): VNode =
+proc Router*(data: RouterData): VNode =
   if data.hashPart == "#/": show = rindex
   elif data.hashPart == "#/articles": show = rarticles
   elif data.hashPart == "#/about": show = rabout
@@ -39,4 +39,3 @@ proc createDom(data: RouterData): VNode =
         of rstats: stats.stats(Github)
       route
       makeFooter()
-setRenderer createDom
