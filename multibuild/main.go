@@ -18,8 +18,8 @@ func build(ctx context.Context) error {
 	fmt.Println("Building with Dagger")
 
 	// define build matrix
-	nimVersions := []string{"1.6.0"}
-	goVersions := []string{"1.18", "1.19"}
+	nimVersions := []string{"latest"}
+	// goVersions := []string{"1.18", "1.19"}
 
 	// initialize Dagger client
 	client, err := dagger.Connect(ctx, dagger.WithLogOutput(os.Stdout), dagger.WithWorkdir(".."))
@@ -30,35 +30,54 @@ func build(ctx context.Context) error {
 
 	// get reference to the local project
 	src := client.Host().Directory(".")
+	fmt.Printf("src: %s\n", *src)
 
 	// create empty directory to put build outputs
 	// TODO: this directory should be named after the project
 	outputs := client.Directory()
 	for _, nimVersion := range nimVersions {
-		for _, goVersion := range goVersions {
-			// get `golang` image for specified Go version
-			goImageTag := fmt.Sprintf("golang:%s", goVersion)
-			golang := client.Container().From(goImageTag)
+		fmt.Printf("Build for Nim versions: %s\n", nimVersion)
+		// for _, goVersion := range goVersions {
+		// fmt.Printf("Build for Go versions: %s\n", goVersion)
+		// get `golang` image for specified Go version
+		// goImageTag := fmt.Sprintf("golang:%s", goVersion)
+		// golang := client.Container().From(goImageTag)
 
-			// get nim image for specified nim version
-			nimImageTag := fmt.Sprintf("nim:%s", nimVersion)
-			nim := client.Container().From(nimImageTag)
-			
-			// mount cloned repository into `golang` image
-			golang = golang.WithMountedDirectory("/src", src).WithWorkdir("/src")
-			// mount cloned repository into `nim` image
-			nim = nim.WithMountedDirectory("/src", src).WithWorkdir("/src")
+		// get nim image for specified nim version
+		nimImageTag := "nimlang:nim:alpline"
+		nimlang := client.Container().From(nimImageTag)
 
-			// create a directory for each os, arch and version
-			path := fmt.Sprintf("build/%s/%s/%s/", nimVersion, goVersion, "linux")
-			 
-			// build application
-			gobuild = .WithExec([]string{"go", "build", "-o", path})
-			gobuild = build.WithExec([]string{"karen", "r", "-o:" + path, "main.nim"})
+		// mount cloned repository into `golang` image
+		// golang = golang.WithMountedDirectory("/src", src).WithWorkdir("/src")
+		// mount cloned repository into `nim` image
+		nimlang = nimlang.WithMountedDirectory("/src", src).WithWorkdir("/src")
 
-			// get reference to build output directory in container
-			outputs = outputs.WithDirectory(path, build.Directory(path))
-		}
+		// create a directory for each os, arch and version
+		path := fmt.Sprintf("build/%s/%s/", nimVersion, "alpine")
+
+		// build application
+		// gobuild := golang.WithExec([]string{"go", "build", "-o", path})
+		nimbuild := nimlang.WithExec([]string{"nim", "js", "--out:" + path, "./frontend/app.nim"})
+		// copy build artifacts to root directory of the project
+		fmt.Println("Copying build artifacts to root directory of the project")
+		// fmt.Printf("gobuild: %v\n", *gobuild)
+		fmt.Printf("nimbuild: %v\n", *nimbuild)
+		// get alpline image
+		// alpine := client.Container().From("alpine")
+		// mount cloned repository into `alpine` image
+		// alpine = alpine.WithMountedDirectory("/src", src).WithWorkdir("/src")
+		// copy build artifacts to root directory of the project
+		// gobuild.WithExec([]string{"cp", path, "."})
+		// nimbuild.WithExec([]string{"cp", path, "."})
+
+		// get reference to build output directory in container
+		// outputs = outputs.WithDirectory(path, golang.Directory(path))
+		// fmt.Printf("golang outputs: %v\n", outputs)
+
+		outputs = outputs.WithDirectory(path, nimlang.Directory(path))
+		fmt.Printf("nimlang outputs: %v\n", *outputs)
+
+		// }
 	}
 	// write build artifacts to host
 	_, err = outputs.Export(ctx, ".")
