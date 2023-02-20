@@ -41,19 +41,20 @@ func build(ctx context.Context) error {
 			golang := client.Container().From(goImageTag)
 
 			// get nim image for specified nim version
-			nimImageTag := fmt.Sprintf("golang:%s", nimVersion)
+			nimImageTag := fmt.Sprintf("nim:%s", nimVersion)
 			nim := client.Container().From(nimImageTag)
 			
 			// mount cloned repository into `golang` image
 			golang = golang.WithMountedDirectory("/src", src).WithWorkdir("/src")
+			// mount cloned repository into `nim` image
 			nim = nim.WithMountedDirectory("/src", src).WithWorkdir("/src")
 
 			// create a directory for each os, arch and version
 			path := fmt.Sprintf("build/%s/%s/%s/", nimVersion, goVersion, "linux")
-			
+			 
 			// build application
-			build = build.WithExec([]string{"go", "build", "-o", path})
-			build = build.WithExec([]string{"karen", "r", "-o:" + path, "main.nim"})
+			gobuild = .WithExec([]string{"go", "build", "-o", path})
+			gobuild = build.WithExec([]string{"karen", "r", "-o:" + path, "main.nim"})
 
 			// get reference to build output directory in container
 			outputs = outputs.WithDirectory(path, build.Directory(path))
