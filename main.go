@@ -8,6 +8,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"os/exec"
 
 	conf "github.com/spf13/viper"
 )
@@ -78,10 +79,10 @@ func main() {
 	}
 
 	if conf.Build {
-		Build()
+		build()
 		os.Exit(0)
 	}
-	
+
 	// Start the server and listen for incoming requests
 	startServer()
 
@@ -107,4 +108,66 @@ func confEnvVariable(key string, config *string) string {
 	}
 	// Start the server and listen for incoming requests
 	return v
+}
+
+func build() {
+	// Set the working directory
+	fmt.Print(os.Getwd())
+	// os.Chdir("/")
+
+	// if the build directory doesn't exist, create it
+	if _, err := os.Stat("build"); os.IsNotExist(err) {
+		if err := os.Mkdir("build", 0755); err != nil {
+			panic(fmt.Errorf("error creating build directory: %v", err))
+		}
+	}
+	// Install dependencies
+	if err := exec.Command("nimble", "install", "karax", "-y").Run(); err != nil {
+		panic(fmt.Errorf("error installing dependencies: %v", err))
+	}
+
+	if err := exec.Command("go", "mod", "tidy").Run(); err != nil {
+		panic(fmt.Errorf("error installing dependencies: %v", err))
+	}
+
+	// Build the application
+	if err := exec.Command("nim", "js", "-o:./public/js/app.js", "./frontend/app.nim").Run(); err != nil {
+		panic(fmt.Errorf("error building application: %v", err))
+	}
+
+	if err := exec.Command("go", "build", "-o", "build").Run(); err != nil {
+		panic(fmt.Errorf("error building application: %v", err))
+	}
+
+	// Create the Dockerfile
+	file, err := os.Create("Dockerfile")
+	if err != nil {
+		panic(fmt.Errorf("error creating Dockerfile: %v", err))
+	}
+	defer file.Close()
+
+	// Write the contents of the Dockerfile
+	file.WriteString(`
+# This is a generated Dockerfile
+FROM alpine:latest
+
+WORKDIR /app
+
+COPY ./build .
+
+EXPOSE 8080
+
+# Set the command to start the app
+ENTRYPOINT ["./build"]`)
+
+	// Build the Docker image
+	cmd := exec.Command("docker", "build", "-t", "nimdude", ".")
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	err = cmd.Run()
+	if err != nil {
+		panic(fmt.Errorf("error building Docker image: %v", err))
+	}
+
+	fmt.Println("Docker image built successfully!")
 }
