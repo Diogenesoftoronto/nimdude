@@ -13,7 +13,12 @@ import (
 var tmpls = template.Must(template.ParseFiles("public/index.html"))
 
 func Index(w http.ResponseWriter, r *http.Request) {
-	err := tmpls.ExecuteTemplate(w, "index.html", nil)
+	data := struct {
+		Title string
+	}{
+		Title: "Index Page",
+	}
+	err := tmpls.ExecuteTemplate(w, "index.html", data)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		log.Fatalf("error executing template: %s", err)
