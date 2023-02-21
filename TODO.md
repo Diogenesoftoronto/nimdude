@@ -1,6 +1,8 @@
-create a simple go server
-create a simple distribution program that creates a docker file and creates an image
-generate partial html files from markdown or rst and convert them to karax
-Add stuff to logic to the partials if needed. 
-Get server to serve static files and make api calls for the partials
-add the karax router to the router nim instead of my current costum one (later)
+TODO:
+## Medium Priority
+- [ ] Write a script to convert Markdown and reStructuredText files to partial HTML files for Karax
+- [ ] Add any necessary logic to the partials to properly render them in Karax
+  ## Low Priority
+- [ ] Integrate the Karax router into the existing Nim router
+- [ ] Refactor the existing custom Nim router to remove any duplicate functionality
+- [ ] Test the new Karax router to ensure all existing routes are working correctly
