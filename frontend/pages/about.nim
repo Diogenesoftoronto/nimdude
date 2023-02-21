@@ -2,12 +2,43 @@ import karax / [vdom, karaxdsl]
 
 
 proc about*(): VNode = 
-    result = buildHtml(tdiv):
+    result = buildHtml(article):
         tdiv(class = "container"):
-            h1(class = "title"):
-              text "wasmdude/about"
             h1(id = "about-me"):
               text "About Me"
+            h2(id = "poetic-introductioncolon"):
+              text "Poetic Introduction:"
+            blockquote:
+              p()
+              p:
+                text """
+I am but a maker in a small Canadian town, Crafting software with rapid-fire,
+trying to hold it down. I am post-anarchist adjacent, or so they say, Though
+what that means, I cannot truly say."""
+              p:
+                text """
+Each day I strive to learn, to keep my skills on the rise, Temporal, Go, and
+Unity, I never compromise. Yet humble must I be, for my journey's just begun, As
+the horizon of knowledge is wider than the sun."""
+              p:
+                text """
+Feline friends I cherish, three in number are they, Ever by my side, as I toil
+and work and play. And when I need respite, from the toil and grind, I dive into
+a litRPGs, or Asimov, to ease my mind."""
+              p:
+                text """
+Portfolios, blogs, and multiplayer games, I have many irons in the fire, And I'm
+making an app called Write and Tell, my greatest desire. But fame and fortune do
+not move me, nor drive me to excel, For true satisfaction comes from the
+difference we make, and the stories we tell."""
+              p:
+                text """
+So raise a glass(of tea), to this humble(the humble never say they are) maker on
+thy journey to the stars, With a heart full of hope, and a mind full of scars.
+May I make a difference, and play my part aright, For in the end, it's not about
+me, it's about making things right."""
+            h2(id = "introduction"):
+              text "Introduction"
             dl(class = "docutils"):
               dt:
                 text "Introductions are "
@@ -99,4 +130,4 @@ cope with anxiety. 😅"""
                 span(class = "nim-sprite")
                 br()
                 small:
-                  text "Made with Nim. Generated: 2023-02-20 09:22:02 UTC"
+                  text "Made with Nim. Generated: 2023-02-21 20:46:57 UTC"
