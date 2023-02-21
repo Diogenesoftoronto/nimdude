@@ -1,5 +1,5 @@
 import karax / [vdom, karaxdsl]
 
 proc contact*(): VNode = 
-    result = buildHtml(tdiv):
+    result = buildHtml(article):
         p: text "I am the contact now"
