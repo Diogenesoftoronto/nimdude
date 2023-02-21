@@ -34,6 +34,7 @@ func startServer() {
 	http.HandleFunc("/", Index)
 	http.HandleFunc("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("public/js/"))).ServeHTTP)
 	http.HandleFunc("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("public/css/"))).ServeHTTP)
+	http.HandleFunc("/static/images/", http.StripPrefix("/static/images/", http.FileServer(http.Dir("public/static/images/"))).ServeHTTP)
 
 	port := confEnvVariable("port", nil)
 	if debug := confEnvVariable("debug", nil); debug != "true" {
