@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"html/template"
 	"log"
 	"net/http"
 	"os"
@@ -9,11 +10,22 @@ import (
 	conf "github.com/spf13/viper"
 )
 
+var tmpls = template.Must(template.ParseFiles("public/index.html"))
+
+func Index(w http.ResponseWriter, r *http.Request) {
+	err := tmpls.ExecuteTemplate(w, "index.html", nil)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Fatalf("error executing template: %s", err)
+	}
+
+}
+
 func main() {
 	// Serve the index.html file when a request is made to the root URL
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "/public/static/index.html")
-	})
+	http.HandleFunc("/", Index)
+	http.HandleFunc("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("public/js/"))).ServeHTTP)
+	http.HandleFunc("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("public/css/"))).ServeHTTP)
 
 	port := confEnvVariable("port", nil)
 	if debug := confEnvVariable("debug", nil); debug != "true" {
