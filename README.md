@@ -1,6 +1,29 @@
 # Nimdude
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/brandonc/nimdude)](https://goreportcard.com/report/github.com/brandonc/nimdude)
+[![Go Reference](https://pkg.go.dev/badge/github.com/brandonc/nimdude.svg)](https://pkg.go.dev/github.com/brandonc/nimdude)
+[![License](https://img.shields.io/github/license/brandonc/nimdude)]
+
+## Description
+
 Nimdude is a personal site built with [Nim](https://nim-lang.org/) and Go (for the backend). It uses [karax](https://github.com/karaxnim/karax) as a frontend ui library. It's a work in progress, but it's a good example of how to use Go and Karax together.
+
+## Table of Contents
+
+- [Nimdude](#nimdude)
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
+  - [Long Description](#long-description)
+  - [Movitivation](#movitivation)
+  - [Features](#features)
+  - [Installation](#installation)
+    - [Installation from source](#installation-from-source)
+    - [Installation from Docker](#installation-from-docker)
+  - [Documentation](#documentation)
+  - [Contributing](#contributing)
+
+
+## Long Description
 
 I initially started this project with using prologue but I decided against as server side generation of code is not what I am looking for. Instead I am going to be using karax to generate the html, and the nim rst2html library to generate the blog posts. I will also be using the nimble package manager to manage the dependencies. I will then use a Go backend to serve the static files and handle the api calls. Probably with encore as that is what I am currently using but I am considering just using the standard http library. Especially as I am not using any of the special features of encore for this project. I want to get more familiar with using the standard library and the basics. I can always continue using encore later.
 
@@ -26,27 +49,47 @@ I built this site because I was having major issues working with the vugu librar
 
 ## Installation
 
+### Installation from source
+
 You'll need to install Nim, nimble and Go. Then you can run the following commands:
 
-```bash
+```sh
 git clone <this_repo>
 ```
 
-```bash
+```sh
 cd nimdude
 ```
 
-```bash
-nimble install prologue
+```sh
+nimble install karax
 ```
 
-```bash
-logue install karax
+```sh
+nim js -o:./public/js/app.js  ./frontend/app.nim   
 ```
 
-```bash
-logue run
+```sh
+go mod tidy
 ```
+
+```sh
+go run main.go
+```
+
+### Installation from Docker
+
+You'll need to install Docker. Then you can run the following commands:
+
+```sh
+docker pull nimdude
+```
+
+```sh
+docker run -p 8080:8080 nimdude
+```
+
+Note that the Docker image is __not yet available__. It will be available soon.
 
 __Keep in mind that this was built using Nim 1.6.0 and Go 1.18.1. It may not work with older versions of Nim or Go. Haven't tested it with newer versions yet__.
 
