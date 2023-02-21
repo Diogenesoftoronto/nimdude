@@ -38,8 +38,9 @@ proc hostStats(host: Githost): VNode =
             td: text $host.commits
 
 proc stats*(hosts: varargs[Githost]): VNode =
-    result = buildHtml(tdiv):
-        for host in hosts:
-            table:
-                hostStats(host)
+    result = buildHtml(article):
+        figure:
+            for host in hosts:
+                table:
+                    hostStats(host)
 
