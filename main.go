@@ -2,6 +2,8 @@ package main
 
 import (
 	"errors"
+	"flag"
+	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -26,7 +28,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func main() {
+func startServer() {
 	// Serve the index.html file when a request is made to the root URL
 	http.HandleFunc("/", Index)
 	http.HandleFunc("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("public/js/"))).ServeHTTP)
@@ -48,6 +50,40 @@ func main() {
 	} else if err != nil {
 		log.Fatalf("error starting server: %s\n", err)
 	}
+}
+
+func main() {
+	// Create a struct with server configuration
+	type Config struct {
+		Port  string
+		Debug bool
+		Build bool
+		help  bool
+	}
+
+	var conf Config
+
+	// add the port number as a flag
+	flag.StringVar(&conf.Port, "port", "8080", "port number to listen on, overrided by the config file")
+	flag.BoolVar(&conf.Debug, "debug", false, "starts the server in debug mode, overrided by the config file")
+	flag.BoolVar(&conf.Build, "build", false, "builds docker image, overrided by the config file")
+	flag.BoolVar(&conf.help, "help", false, "Get a list of all the commands")
+	flag.Parse()
+
+	if conf.help {
+		fmt.Println("Welcome to Nimdude!")
+		fmt.Println("Available commands:")
+		flag.PrintDefaults()
+		os.Exit(0)
+	}
+
+	if conf.Build {
+		Build()
+		os.Exit(0)
+	}
+	
+	// Start the server and listen for incoming requests
+	startServer()
 
 }
 
