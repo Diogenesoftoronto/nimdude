@@ -48,7 +48,7 @@ func startServer(c Config) {
 	if c.Port == "" {
 		c.Port = port
 	} else if port == "" {
-		c.Port = "8080"
+		c.Port = os.Getenv("port")
 	}
 	debug := confEnvVariable("debug", nil)
 	if !c.Debug && debug == "" {
@@ -81,9 +81,9 @@ func main() {
 	var Conf Config
 
 	// add the port number as a flag
-	flag.StringVar(&Conf.Port, "port", "8080", "port number to listen on, overrided by the config file")
-	flag.BoolVar(&Conf.Debug, "debug", false, "starts the server in debug mode, overrided by the config file")
-	flag.BoolVar(&Conf.Build, "build", false, "builds docker image, overrided by the config file")
+	flag.StringVar(&Conf.Port, "port", "", "port number to listen on, overrides the config file")
+	flag.BoolVar(&Conf.Debug, "debug", false, "starts the server in debug mode, overrides the config file")
+	flag.BoolVar(&Conf.Build, "build", false, "builds docker image, overrides the config file")
 	flag.BoolVar(&Conf.help, "help", false, "Get a list of all the commands")
 	flag.Parse()
 
