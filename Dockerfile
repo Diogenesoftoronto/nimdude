@@ -13,7 +13,9 @@ COPY ./public ./public
 
 COPY main.go .
 
-Run go build -o build
+ENV PORT=$PORT
+
+RUN go build -o build
 
 RUN go mod download
 EXPOSE 8080

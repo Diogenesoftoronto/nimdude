@@ -48,7 +48,7 @@ func startServer(c Config) {
 	if c.Port == "" {
 		c.Port = port
 	} else if port == "" {
-		c.Port = os.Getenv("port")
+		c.Port = os.Getenv("PORT")
 	}
 	debug := confEnvVariable("debug", nil)
 	if !c.Debug && debug == "" {
@@ -179,7 +179,9 @@ COPY ./public ./public
 
 COPY main.go .
 
-Run go build -o build
+ENV PORT=$PORT
+
+RUN go build -o build
 
 RUN go mod download
 EXPOSE 8080
