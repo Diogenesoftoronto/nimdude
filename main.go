@@ -37,17 +37,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 	// Get the MIME type for the file extension
 	if strings.Contains(r.RequestURI, ".js") {
 		w.Header().Set("Content-Type", "application/javascript")
-	} else if strings.Contains(r.RequestURI, ".css") {
-		w.Header().Set("Content-Type", "text/css")
-	} else if strings.Contains(r.RequestURI, ".png") {
-		w.Header().Set("Content-Type", "image/png")
-	} else if strings.Contains(r.RequestURI, ".jpg") {
-		w.Header().Set("Content-Type", "image/jpg")
-	} else if strings.Contains(r.RequestURI, ".svg") {
-		w.Header().Set("Content-Type", "image/svg+xml")
-	} else if strings.Contains(r.RequestURI, ".ico") {
-		w.Header().Set("Content-Type", "image/x-icon")
-	}
+	} 
 	// Set the Content-Type header to the MIME type
 	// w.Header().Set("Content-Type", mimeType.String())
 
@@ -61,8 +51,8 @@ func Index(w http.ResponseWriter, r *http.Request) {
 
 // add detect mimetypes for js files
 func serveJs(w http.ResponseWriter, r *http.Request) {
-	http.StripPrefix("/js/", http.FileServer(http.Dir("public/js/"))).ServeHTTP(w, r)
 	w.Header().Set("Content-Type", "application/javascript")
+	http.StripPrefix("/js/", http.FileServer(http.Dir("public/js/"))).ServeHTTP(w, r)
 }
 
 func startServer(c Config) {
