@@ -87,8 +87,10 @@ func main() {
 		os.Exit(0)
 	}
 
-	if err := build(); err != nil && Conf.Build {
-		panic(err)
+	if Conf.Build {
+		if err := build(); err != nil {
+			panic(err)
+		}
 	}
 
 	// Start the server and listen for incoming requests
