@@ -4,7 +4,9 @@ FROM ubuntu:latest
 
 WORKDIR /app
 
-COPY . .
+COPY ./build .
+
+COPY ./public ./public
 
 EXPOSE 8080
 
