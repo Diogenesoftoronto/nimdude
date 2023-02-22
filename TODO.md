@@ -1,4 +1,9 @@
-TODO:
+# TODO
+Here is a list of things that need to be done to complete this project. If you are looking to contribute this is a good place to start.
+## High Priority
+
+- [x] Add a way to detect mime types for files and then serve them with the correct content type
+- [ ] 
 ## Medium Priority
 - [ ] Write a script to convert Markdown and reStructuredText files to partial HTML files for Karax
 - [ ] Add any necessary logic to the partials to properly render them in Karax
