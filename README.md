@@ -89,7 +89,7 @@ docker pull nimdude
 docker run -p 8080:8080 nimdude
 ```
 
-Note that the Docker image is __not yet available__. It will be available soon.
+Note that the Docker image is now __available__!
 
 __Keep in mind that this was built using Nim 1.6.0 and Go 1.18.1. It may not work with older versions of Nim or Go. Haven't tested it with newer versions yet__.
 
