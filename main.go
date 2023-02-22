@@ -40,16 +40,16 @@ func Index(w http.ResponseWriter, r *http.Request) {
 // add detect mimetypes for js files
 func serveJs(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/javascript")
-	http.StripPrefix("/static/images/", http.FileServer(http.Dir("public/static/images/"))).ServeHTTP(w, r)
+	http.StripPrefix("/js/", http.FileServer(http.Dir("public/js/"))).ServeHTTP(w, r)
 }
 
 func startServer(c Config) {
 	// Serve the index.html file when a request is made to the root URL
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", Index)
-	mux.HandleFunc("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("public/js/"))).ServeHTTP)
+	mux.HandleFunc("/js/", serveJs)
 	mux.HandleFunc("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("public/css/"))).ServeHTTP)
-	mux.HandleFunc("/static/images/", serveJs)
+	mux.HandleFunc("/static/images/", http.StripPrefix("/static/images/", http.FileServer(http.Dir("public/static/images/"))).ServeHTTP)
 
 	port := confEnvVariable("port", &c.File)
 	if c.Port == "" {
