@@ -5,5 +5,5 @@
 import karax / [vdom, karaxdsl]
 
 proc projects*(): VNode = 
-    result = buildHtml(article):
+    result = buildHtml(tdiv(class="container")):
         p: text "I am the projects now"
