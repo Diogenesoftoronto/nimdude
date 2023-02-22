@@ -6,3 +6,6 @@ TODO:
 - [ ] Integrate the Karax router into the existing Nim router
 - [ ] Refactor the existing custom Nim router to remove any duplicate functionality
 - [ ] Test the new Karax router to ensure all existing routes are working correctly
+- [ ] Add mulitple http servers to serve static files to the browser. 
+- [ ] Add the ability to serve using a cdn
+- [ ] Use caddy as a proxy for these servers
