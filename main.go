@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"os/exec"
+	"strings"
 
 	conf "github.com/spf13/viper"
 )
@@ -29,6 +30,30 @@ func Index(w http.ResponseWriter, r *http.Request) {
 	}{
 		Title: "Index Page",
 	}
+	log.Printf("Request: %v\n", r)
+	log.Printf("Request URL: %s", r.RequestURI)
+	// if request is for a file check the mime type
+	// Get the file extension from the URL
+	// Get the MIME type for the file extension
+	if strings.Contains(r.RequestURI, ".js") {
+		w.Header().Set("Content-Type", "application/javascript")
+	} else if strings.Contains(r.RequestURI, ".css") {
+		w.Header().Set("Content-Type", "text/css")
+	} else if strings.Contains(r.RequestURI, ".png") {
+		w.Header().Set("Content-Type", "image/png")
+	} else if strings.Contains(r.RequestURI, ".jpg") {
+		w.Header().Set("Content-Type", "image/jpg")
+	} else if strings.Contains(r.RequestURI, ".svg") {
+		w.Header().Set("Content-Type", "image/svg+xml")
+	} else if strings.Contains(r.RequestURI, ".ico") {
+		w.Header().Set("Content-Type", "image/x-icon")
+	} else {
+		log.Fatalf("error detecting MIME type")
+	}
+
+	// Set the Content-Type header to the MIME type
+	// w.Header().Set("Content-Type", mimeType.String())
+
 	err := tmpls.ExecuteTemplate(w, "index.html", data)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
