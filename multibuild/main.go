@@ -44,7 +44,7 @@ func build(ctx context.Context) error {
 		// golang := client.Container().From(goImageTag)
 
 		// get nim image for specified nim version
-		nimImageTag := "nimlang:nim:alpline"
+		nimImageTag := "nimlang/nim"
 		nimlang := client.Container().From(nimImageTag)
 
 		// mount cloned repository into `golang` image
@@ -86,3 +86,41 @@ func build(ctx context.Context) error {
 	}
 	return nil
 }
+// Create a new Dagger client
+// ctx := context.Background()
+// daggerClient, err := dagger.Connect(ctx, dagger.WithLogOutput(os.Stdout))
+// if err != nil {
+// 	panic(err)
+// }
+// defer daggerClient.Close()
+
+// // Get the working directory on the host
+// source := daggerClient.Host().Directory(".", dagger.HostDirectoryOpts{
+// 	Exclude: []string{"ci"},
+// })
+
+// // Build the Go binary
+// builder := daggerClient.Container(dagger.ContainerOpts{Platform: "linux/amd64"}).
+// 	From("golang:1.17-alpine").
+// 	WithMountedDirectory("/app", source).
+// 	WithWorkdir("/app").
+// 	WithExec([]string{"go", "build", "-o", "build"}).
+// 	WithFile("/app/.env", source.File(".env"))
+
+// // Create the final container image
+// image := builder.
+// 	CopyFrom("/app/build", "/app/build").
+// 	From("alpine:latest").
+// 	WithFile("/app/.env", builder.File("/app/.env")).
+// 	WithEntrypoint([]string{"/app/build"}).
+// 	WithExposedPort(8080)
+
+// // Publish the container image to a registry
+// publishAddress := "my-registry.com/my-image"
+// imageRef, err := image.Publish(ctx, publishAddress)
+// if err != nil {
+// 	panic(err)
+// }
+
+// // Print the Docker image reference
+// fmt.Println("Published at:", imageRef)
