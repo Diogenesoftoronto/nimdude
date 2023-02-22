@@ -1,10 +1,12 @@
 
 # This is a generated Dockerfile
-FROM alpine:latest
+FROM ubuntu:latest
+
 WORKDIR /app
-COPY ./build .
+
+COPY . .
 
 EXPOSE 8080
 
 # Set the command to start the app
-ENTRYPOINT ["./build"]
+CMD ["./build"]
