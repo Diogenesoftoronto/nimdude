@@ -202,7 +202,7 @@ const Countries = CountriesRaw.splitLines()
 
 proc contact*(): VNode = 
     result = buildHtml(tdiv(class="container")):
-        form:
+        form(`method`="POST", action="/contact"):
             tdiv:
                 tdiv:
                     label(`for`="firstname") 
@@ -245,4 +245,5 @@ proc contact*(): VNode =
                 tdiv:
                     textarea(id="subject", name="subject", placeholder="Write something..")
             tdiv:
-                input(`type`="submit", value="Submit")
+                button(`type`="submit"):
+                    text "Submit"
