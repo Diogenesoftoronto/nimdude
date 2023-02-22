@@ -2,8 +2,7 @@ import karax / [vdom, karaxdsl]
 
 
 proc about*(): VNode = 
-    result = buildHtml(article):
-        tdiv(class = "container"):
+    result = buildHtml(tdiv(class="container")):
             h1(id = "about-me"):
               text "About Me"
             h2(id = "poetic-introductioncolon"):
