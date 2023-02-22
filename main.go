@@ -31,10 +31,11 @@ func Index(w http.ResponseWriter, r *http.Request) {
 
 func startServer() {
 	// Serve the index.html file when a request is made to the root URL
-	http.HandleFunc("/", Index)
-	http.HandleFunc("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("public/js/"))).ServeHTTP)
-	http.HandleFunc("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("public/css/"))).ServeHTTP)
-	http.HandleFunc("/static/images/", http.StripPrefix("/static/images/", http.FileServer(http.Dir("public/static/images/"))).ServeHTTP)
+	mux := http.NewServeMux()
+	mux.HandleFunc("/", Index)
+	mux.HandleFunc("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("public/js/"))).ServeHTTP)
+	mux.HandleFunc("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("public/css/"))).ServeHTTP)
+	mux.HandleFunc("/static/images/", http.StripPrefix("/static/images/", http.FileServer(http.Dir("public/static/images/"))).ServeHTTP)
 
 	port := confEnvVariable("port", nil)
 	if debug := confEnvVariable("debug", nil); debug != "true" {
@@ -46,7 +47,7 @@ func startServer() {
 	}
 
 	log.Printf("Listening on http://localhost:%s...\n", port)
-	err := http.ListenAndServe(":"+port, nil)
+	err := http.ListenAndServe(":"+port, mux)
 	if errors.Is(err, http.ErrServerClosed) {
 		log.Printf("server closed\n")
 	} else if err != nil {
@@ -150,16 +151,16 @@ func build() {
 	// Write the contents of the Dockerfile
 	file.WriteString(`
 # This is a generated Dockerfile
-FROM alpine:latest
+FROM ubuntu:latest
 
 WORKDIR /app
 
-COPY ./build .
+COPY . .
 
 EXPOSE 8080
 
 # Set the command to start the app
-ENTRYPOINT ["./build"]`)
+CMD ["./build"]`)
 
 	// Build the Docker image
 	cmd := exec.Command("docker", "build", "-t", "nimdude", ".")
