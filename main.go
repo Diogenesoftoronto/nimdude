@@ -13,6 +13,13 @@ import (
 	conf "github.com/spf13/viper"
 )
 
+type Config struct {
+	Port  string
+	Debug bool
+	Build bool
+	help  bool
+}
+
 var tmpls = template.Must(template.ParseFiles("public/index.html"))
 
 func Index(w http.ResponseWriter, r *http.Request) {
@@ -29,7 +36,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func startServer() {
+func startServer(c Config) {
 	// Serve the index.html file when a request is made to the root URL
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", Index)
@@ -38,6 +45,12 @@ func startServer() {
 	mux.HandleFunc("/static/images/", http.StripPrefix("/static/images/", http.FileServer(http.Dir("public/static/images/"))).ServeHTTP)
 
 	port := confEnvVariable("port", nil)
+	if c.Port == "" {
+		c.Port = port
+	} else if port == "" {
+		c.Port = "8080"
+	}
+
 	if debug := confEnvVariable("debug", nil); debug != "true" {
 		file, err := os.OpenFile("logs.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 		if err != nil {
@@ -46,8 +59,8 @@ func startServer() {
 		log.SetOutput(file)
 	}
 
-	log.Printf("Listening on http://localhost:%s...\n", port)
-	err := http.ListenAndServe(":"+port, mux)
+	log.Printf("Listening on http://localhost:%s...\n", c.Port)
+	err := http.ListenAndServe(":"+c.Port, mux)
 	if errors.Is(err, http.ErrServerClosed) {
 		log.Printf("server closed\n")
 	} else if err != nil {
@@ -57,36 +70,29 @@ func startServer() {
 
 func main() {
 	// Create a struct with server configuration
-	type Config struct {
-		Port  string
-		Debug bool
-		Build bool
-		help  bool
-	}
 
-	var conf Config
+	var Conf Config
 
 	// add the port number as a flag
-	flag.StringVar(&conf.Port, "port", "8080", "port number to listen on, overrided by the config file")
-	flag.BoolVar(&conf.Debug, "debug", false, "starts the server in debug mode, overrided by the config file")
-	flag.BoolVar(&conf.Build, "build", false, "builds docker image, overrided by the config file")
-	flag.BoolVar(&conf.help, "help", false, "Get a list of all the commands")
+	flag.StringVar(&Conf.Port, "port", "8080", "port number to listen on, overrided by the config file")
+	flag.BoolVar(&Conf.Debug, "debug", false, "starts the server in debug mode, overrided by the config file")
+	flag.BoolVar(&Conf.Build, "build", false, "builds docker image, overrided by the config file")
+	flag.BoolVar(&Conf.help, "help", false, "Get a list of all the commands")
 	flag.Parse()
 
-	if conf.help {
+	if Conf.help {
 		fmt.Println("Welcome to Nimdude!")
 		fmt.Println("Available commands:")
 		flag.PrintDefaults()
 		os.Exit(0)
 	}
 
-	if conf.Build {
-		build()
-		os.Exit(0)
+	if err := build(); err != nil && Conf.Build {
+		panic(err)
 	}
 
 	// Start the server and listen for incoming requests
-	startServer()
+	startServer(Conf)
 
 }
 
@@ -100,19 +106,20 @@ func confEnvVariable(key string, config *string) string {
 	// Set the file name of the configuration file
 	conf.SetConfigFile(configstr)
 	if err := conf.ReadInConfig(); err != nil {
-		log.Fatalf("Error reading config file, %s", err)
+		log.Printf("error reading config file: %s\n using default instead", err)
+		return key
 	}
 
 	// Use env variables to set the port and other variables
-	v, ok := conf.Get(key).(string)
+	value, ok := conf.Get(key).(string)
 	if !ok {
 		log.Fatalf("Invalid type assertion")
 	}
 	// Start the server and listen for incoming requests
-	return v
+	return value
 }
 
-func build() {
+func build() error {
 	// Set the working directory
 	fmt.Print(os.Getwd())
 	// os.Chdir("/")
@@ -120,31 +127,31 @@ func build() {
 	// if the build directory doesn't exist, create it
 	if _, err := os.Stat("build"); os.IsNotExist(err) {
 		if err := os.Mkdir("build", 0755); err != nil {
-			panic(fmt.Errorf("error creating build directory: %v", err))
+			return fmt.Errorf("error creating build directory: %v", err)
 		}
 	}
 	// Install dependencies
 	if err := exec.Command("nimble", "install", "karax", "-y").Run(); err != nil {
-		panic(fmt.Errorf("error installing dependencies: %v", err))
+		return fmt.Errorf("error installing dependencies: %v", err)
 	}
 
 	if err := exec.Command("go", "mod", "tidy").Run(); err != nil {
-		panic(fmt.Errorf("error installing dependencies: %v", err))
+		return fmt.Errorf("error installing dependencies: %v", err)
 	}
 
 	// Build the application
 	if err := exec.Command("nim", "js", "-o:./public/js/app.js", "./frontend/app.nim").Run(); err != nil {
-		panic(fmt.Errorf("error building application: %v", err))
+		return fmt.Errorf("error building application: %v", err)
 	}
 
 	if err := exec.Command("go", "build", "-o", "build").Run(); err != nil {
-		panic(fmt.Errorf("error building application: %v", err))
+		return fmt.Errorf("error building application: %v", err)
 	}
 
 	// Create the Dockerfile
 	file, err := os.Create("Dockerfile")
 	if err != nil {
-		panic(fmt.Errorf("error creating Dockerfile: %v", err))
+		return fmt.Errorf("error creating Dockerfile: %v", err)
 	}
 	defer file.Close()
 
@@ -155,7 +162,11 @@ FROM ubuntu:latest
 
 WORKDIR /app
 
-COPY . .
+COPY ./build .
+
+COPY .env .
+
+COPY ./public ./public
 
 EXPOSE 8080
 
@@ -172,4 +183,6 @@ CMD ["./build"]`)
 	}
 
 	fmt.Println("Docker image built successfully!")
+
+	return nil
 }
