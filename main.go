@@ -17,6 +17,7 @@ type Config struct {
 	Port  string
 	Debug bool
 	Build bool
+	File  string
 	help  bool
 }
 
@@ -44,13 +45,18 @@ func startServer(c Config) {
 	mux.HandleFunc("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("public/css/"))).ServeHTTP)
 	mux.HandleFunc("/static/images/", http.StripPrefix("/static/images/", http.FileServer(http.Dir("public/static/images/"))).ServeHTTP)
 
-	port := confEnvVariable("port", nil)
+	port := confEnvVariable("port", &c.File)
 	if c.Port == "" {
 		c.Port = port
-	} else if port == "" {
-		c.Port = os.Getenv("PORT")
 	}
-	debug := confEnvVariable("debug", nil)
+	if port == "" {
+		var ok bool
+		c.Port, ok = os.LookupEnv("PORT")
+		if !ok {
+			c.Port = "9090"
+		}
+	}
+	debug := confEnvVariable("debug", &c.File)
 	if !c.Debug && debug == "" {
 		c.Debug = false
 	} else if debug == "true" {
@@ -85,6 +91,8 @@ func main() {
 	flag.BoolVar(&Conf.Debug, "debug", false, "starts the server in debug mode, overrides the config file")
 	flag.BoolVar(&Conf.Build, "build", false, "builds docker image, overrides the config file")
 	flag.BoolVar(&Conf.help, "help", false, "Get a list of all the commands")
+	// add config file as a flag
+	flag.StringVar(&Conf.File, "config", "", "config file (default is .env)")
 	flag.Parse()
 
 	if Conf.help {
@@ -106,7 +114,7 @@ func main() {
 
 func confEnvVariable(key string, config *string) string {
 
-	if config == nil {
+	if config == nil || *config == "" {
 		str := ".env"
 		config = &str
 	}
@@ -115,7 +123,7 @@ func confEnvVariable(key string, config *string) string {
 	conf.SetConfigFile(configstr)
 	if err := conf.ReadInConfig(); err != nil {
 		log.Printf("error reading config file: %s\n using default instead", err)
-		return key
+		return ""
 	}
 
 	// Use env variables to set the port and other variables
@@ -164,8 +172,7 @@ func build() error {
 	defer file.Close()
 
 	// Write the contents of the Dockerfile
-	file.WriteString(`
-# This is a generated Dockerfile
+	file.WriteString(`# This is a generated Dockerfile
 FROM ubuntu:latest
 FROM golang:1.18
 
@@ -179,7 +186,9 @@ COPY ./public ./public
 
 COPY main.go .
 
-ENV PORT=$PORT
+ARG PORT
+
+ENV PORT $PORT
 
 RUN go build -o build
 
@@ -190,7 +199,7 @@ EXPOSE 8080
 CMD ["./build"]`)
 
 	// Build the Docker image
-	cmd := exec.Command("docker", "build", "-t", "nimdude", ".")
+	cmd := exec.Command("docker", "build", "-t", "nimdude", "--build-arg", "PORT=$PORT", ".")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	err = cmd.Run()
