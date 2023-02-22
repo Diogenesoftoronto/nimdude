@@ -6,6 +6,8 @@ WORKDIR /app
 
 COPY ./build .
 
+COPY .env .
+
 COPY ./public ./public
 
 EXPOSE 8080
