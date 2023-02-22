@@ -47,10 +47,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "image/svg+xml")
 	} else if strings.Contains(r.RequestURI, ".ico") {
 		w.Header().Set("Content-Type", "image/x-icon")
-	} else {
-		log.Fatalf("error detecting MIME type")
 	}
-
 	// Set the Content-Type header to the MIME type
 	// w.Header().Set("Content-Type", mimeType.String())
 
