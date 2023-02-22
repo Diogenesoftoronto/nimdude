@@ -57,7 +57,7 @@ func startServer(c Config) {
 		c.Debug = true
 	}
 
-	if !c.Debug{
+	if c.Debug {
 		file, err := os.OpenFile("logs.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 		if err != nil {
 			log.Fatal(err)
