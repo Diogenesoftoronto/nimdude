@@ -50,8 +50,14 @@ func startServer(c Config) {
 	} else if port == "" {
 		c.Port = "8080"
 	}
+	debug := confEnvVariable("debug", nil)
+	if !c.Debug && debug == "" {
+		c.Debug = false
+	} else if debug == "true" {
+		c.Debug = true
+	}
 
-	if debug := confEnvVariable("debug", nil); debug != "true" {
+	if !c.Debug{
 		file, err := os.OpenFile("logs.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 		if err != nil {
 			log.Fatal(err)
@@ -69,6 +75,7 @@ func startServer(c Config) {
 }
 
 func main() {
+	fmt.Println("Welcome to Nimdude!")
 	// Create a struct with server configuration
 
 	var Conf Config
@@ -81,7 +88,6 @@ func main() {
 	flag.Parse()
 
 	if Conf.help {
-		fmt.Println("Welcome to Nimdude!")
 		fmt.Println("Available commands:")
 		flag.PrintDefaults()
 		os.Exit(0)
@@ -161,15 +167,21 @@ func build() error {
 	file.WriteString(`
 # This is a generated Dockerfile
 FROM ubuntu:latest
+FROM golang:1.18
 
 WORKDIR /app
 
-COPY ./build .
+COPY ./go.mod .
 
-COPY .env .
+COPY ./go.sum .
 
 COPY ./public ./public
 
+COPY main.go .
+
+Run go build -o build
+
+RUN go mod download
 EXPOSE 8080
 
 # Set the command to start the app
