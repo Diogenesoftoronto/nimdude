@@ -64,8 +64,8 @@ func Index(w http.ResponseWriter, r *http.Request) {
 
 // add detect mimetypes for js files
 func serveJs(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/javascript")
 	http.StripPrefix("/js/", http.FileServer(http.Dir("public/js/"))).ServeHTTP(w, r)
+	w.Header().Set("Content-Type", "application/javascript")
 }
 
 func startServer(c Config) {
