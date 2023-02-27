@@ -1,8 +1,8 @@
 import karax / [vdom, karaxdsl]
-import std/options
-import ../components/article
+# import std/options
+# import ../components/article
 
-var articles = ["""<h1>OSS Made Me a Better Developer</h1>
+var stuff = """<h1>OSS Made Me a Better Developer</h1>
 
 <p>Switching to Linux and using OSS made me a better developer. Before I go on to explain why, let me first say that I think of myself as more of a pragmatic person who takes more nuance and balanced views on software. That being said, I do think that calling one self a pragmatist is often just a meaningless phrase for saying that my balance is the right one. Basically, using open source should depend on your use case and I believe that you don&rsquo;t need to use open source to be a good developer or that you should always use open source. However, I do think that there are many reason that developers especially should be using a lot more open source software than they currently do. Also, a bit of a warning, I give a lot of retrospective. This is a bit of a story about my journey and how I got to where I am now. Be prepared for meandering its part of the fun.</p>
 
@@ -58,9 +58,8 @@ var articles = ["""<h1>OSS Made Me a Better Developer</h1>
 
 <p>In short, if you&rsquo;re a developer who wants to make a difference and contribute to the wider community, open source is the way to go. By working together with like-minded developers, you can create amazing software that has the potential to change the world. So go ahead, join an open source project today, and experience the power of collaborative development for yourself!</p>
 
-<p><code>If you are interested in learing more about my experience with open source software and how it has helped me become a better developer, I plan on writing a second part to this going into specific examples. Remember that I love to get feedback. So if you have any further questions or comments please feel free to reach out. Links in the footer</code></p>"""]
+<p><code>If you are interested in learing more about my experience with open source software and how it has helped me become a better developer, I plan on writing a second part to this going into specific examples. Remember that I love to get feedback. So if you have any further questions or comments please feel free to reach out. Links in the footer</code></p>"""
 
 proc Articles*(): VNode = 
     result = buildHtml(tdiv(class="container")):
-        for _, article in articles:
-            article.Article.get
+            verbatim(stuff)

@@ -86,10 +86,10 @@ var NTI603979781 = {size: 0, kind: 14, base: null, node: null, finalizer: null};
 var NTI603979782 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI721420337 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI33554456 = {size: 0,kind: 31,base: null,node: null,finalizer: null};
-var NTI1476395012 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
-var NTI1476395011 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1543503879 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1543503890 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
+var NTI1426063364 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
+var NTI1426063363 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1493172231 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI1493172242 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI33555124 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI33555128 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI33555130 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
@@ -131,16 +131,16 @@ NTI33555128.base = NTI33555113;
 var NNI33555124 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
 NTI33555124.node = NNI33555124;
 NTI33555124.base = NTI33555113;
-var NNI1543503879 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554439, name: "Field0", sons: null}, 
+var NNI1493172231 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "Field0", len: 0, typ: NTI33554439, name: "Field0", sons: null}, 
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554439, name: "Field1", sons: null}]};
-NTI1543503879.node = NNI1543503879;
-NTI1543503890.base = NTI1543503879;
-NTI1476395012.base = NTI33554439;
-var NNI1476395011 = {kind: 2, len: 4, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "name", len: 0, typ: NTI33554439, name: "name", sons: null}, 
-{kind: 1, offset: "repos", len: 0, typ: NTI1476395012, name: "repos", sons: null}, 
+NTI1493172231.node = NNI1493172231;
+NTI1493172242.base = NTI1493172231;
+NTI1426063364.base = NTI33554439;
+var NNI1426063363 = {kind: 2, len: 4, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "name", len: 0, typ: NTI33554439, name: "name", sons: null}, 
+{kind: 1, offset: "repos", len: 0, typ: NTI1426063364, name: "repos", sons: null}, 
 {kind: 1, offset: "stars", len: 0, typ: NTI33554456, name: "stars", sons: null}, 
 {kind: 1, offset: "commits", len: 0, typ: NTI33554456, name: "commits", sons: null}]};
-NTI1476395011.node = NNI1476395011;
+NTI1426063363.node = NNI1426063363;
 var NNI721420337 = {kind: 2, len: 368, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "alignContent", len: 0, typ: NTI33554440, name: "alignContent", sons: null}, 
 {kind: 1, offset: "alignItems", len: 0, typ: NTI33554440, name: "alignItems", sons: null}, 
 {kind: 1, offset: "alignSelf", len: 0, typ: NTI33554440, name: "alignSelf", sons: null}, 
@@ -1316,7 +1316,7 @@ function nimMin(a_33556994, b_33556995) {
   return result_33556996;
 
 }
-            var Routes_1442840577 = [makeNimstrLit("about"), makeNimstrLit("contact"), makeNimstrLit("projects"), makeNimstrLit("stats"), makeNimstrLit("articles")];
+            var Routes_1392508929 = [makeNimstrLit("about"), makeNimstrLit("contact"), makeNimstrLit("projects"), makeNimstrLit("stats"), makeNimstrLit("articles")];
 var ConstSet2 = setConstr([97, 122]);
 
 function nimMax(a_33556998, b_33556999) {
@@ -1339,7 +1339,7 @@ function nimMax(a_33556998, b_33556999) {
   return result_33557000;
 
 }
-            var Countries_1426063373 = [makeNimstrLit("Afghanistan"), makeNimstrLit("Albania"), makeNimstrLit("Algeria"), makeNimstrLit("Andorra"), makeNimstrLit("Angola"), makeNimstrLit("Antigua & Deps"), makeNimstrLit("Argentina"), makeNimstrLit("Armenia"), makeNimstrLit("Australia"), makeNimstrLit("Austria"), makeNimstrLit("Azerbaijan"), makeNimstrLit("Bahamas"), makeNimstrLit("Bahrain"), makeNimstrLit("Bangladesh"), makeNimstrLit("Barbados"), makeNimstrLit("Belarus"), makeNimstrLit("Belgium"), makeNimstrLit("Belize"), makeNimstrLit("Benin"), makeNimstrLit("Bhutan"), makeNimstrLit("Bolivia"), makeNimstrLit("Bosnia Herzegovina"), makeNimstrLit("Botswana"), makeNimstrLit("Brazil"), makeNimstrLit("Brunei"), makeNimstrLit("Bulgaria"), makeNimstrLit("Burkina"), makeNimstrLit("Burundi"), makeNimstrLit("Cambodia"), makeNimstrLit("Cameroon"), makeNimstrLit("Canada"), makeNimstrLit("Cape Verde"), makeNimstrLit("Central African Rep"), makeNimstrLit("Chad"), makeNimstrLit("Chile"), makeNimstrLit("China"), makeNimstrLit("Colombia"), makeNimstrLit("Comoros"), makeNimstrLit("Congo"), makeNimstrLit("Congo {Democratic Rep}"), makeNimstrLit("Costa Rica"), makeNimstrLit("Croatia"), makeNimstrLit("Cuba"), makeNimstrLit("Cyprus"), makeNimstrLit("Czech Republic"), makeNimstrLit("Denmark"), makeNimstrLit("Djibouti"), makeNimstrLit("Dominica"), makeNimstrLit("Dominican Republic"), makeNimstrLit("East Timor"), makeNimstrLit("Ecuador"), makeNimstrLit("Egypt"), makeNimstrLit("El Salvador"), makeNimstrLit("Equatorial Guinea"), makeNimstrLit("Eritrea"), makeNimstrLit("Estonia"), makeNimstrLit("Ethiopia"), makeNimstrLit("Fiji"), makeNimstrLit("Finland"), makeNimstrLit("France"), makeNimstrLit("Gabon"), makeNimstrLit("Gambia"), makeNimstrLit("Georgia"), makeNimstrLit("Germany"), makeNimstrLit("Ghana"), makeNimstrLit("Greece"), makeNimstrLit("Grenada"), makeNimstrLit("Guatemala"), makeNimstrLit("Guinea"), makeNimstrLit("Guinea-Bissau"), makeNimstrLit("Guyana"), makeNimstrLit("Haiti"), makeNimstrLit("Honduras"), makeNimstrLit("Hungary"), makeNimstrLit("Iceland"), makeNimstrLit("India"), makeNimstrLit("Indonesia"), makeNimstrLit("Iran"), makeNimstrLit("Iraq"), makeNimstrLit("Ireland {Republic}"), makeNimstrLit("Israel"), makeNimstrLit("Italy"), makeNimstrLit("Ivory Coast"), makeNimstrLit("Jamaica"), makeNimstrLit("Japan"), makeNimstrLit("Jordan"), makeNimstrLit("Kazakhstan"), makeNimstrLit("Kenya"), makeNimstrLit("Kiribati"), makeNimstrLit("Korea North"), makeNimstrLit("Korea South"), makeNimstrLit("Kosovo"), makeNimstrLit("Kuwait"), makeNimstrLit("Kyrgyzstan"), makeNimstrLit("Laos"), makeNimstrLit("Latvia"), makeNimstrLit("Lebanon"), makeNimstrLit("Lesotho"), makeNimstrLit("Liberia"), makeNimstrLit("Libya"), makeNimstrLit("Liechtenstein"), makeNimstrLit("Lithuania"), makeNimstrLit("Luxembourg"), makeNimstrLit("Macedonia"), makeNimstrLit("Madagascar"), makeNimstrLit("Malawi"), makeNimstrLit("Malaysia"), makeNimstrLit("Maldives"), makeNimstrLit("Mali"), makeNimstrLit("Malta"), makeNimstrLit("Marshall Islands"), makeNimstrLit("Mauritania"), makeNimstrLit("Mauritius"), makeNimstrLit("Mexico"), makeNimstrLit("Micronesia"), makeNimstrLit("Moldova"), makeNimstrLit("Monaco"), makeNimstrLit("Mongolia"), makeNimstrLit("Montenegro"), makeNimstrLit("Morocco"), makeNimstrLit("Mozambique"), makeNimstrLit("Myanmar, {Burma}"), makeNimstrLit("Namibia"), makeNimstrLit("Nauru"), makeNimstrLit("Nepal"), makeNimstrLit("Netherlands"), makeNimstrLit("New Zealand"), makeNimstrLit("Nicaragua"), makeNimstrLit("Niger"), makeNimstrLit("Nigeria"), makeNimstrLit("Norway"), makeNimstrLit("Oman"), makeNimstrLit("Pakistan"), makeNimstrLit("Palau"), makeNimstrLit("Panama"), makeNimstrLit("Papua New Guinea"), makeNimstrLit("Paraguay"), makeNimstrLit("Peru"), makeNimstrLit("Philippines"), makeNimstrLit("Poland"), makeNimstrLit("Portugal"), makeNimstrLit("Qatar"), makeNimstrLit("Romania"), makeNimstrLit("Russian Federation"), makeNimstrLit("Rwanda"), makeNimstrLit("St Kitts & Nevis"), makeNimstrLit("St Lucia"), makeNimstrLit("Saint Vincent & the Grenadines"), makeNimstrLit("Samoa"), makeNimstrLit("San Marino"), makeNimstrLit("Sao Tome & Principe"), makeNimstrLit("Saudi Arabia"), makeNimstrLit("Senegal"), makeNimstrLit("Serbia"), makeNimstrLit("Seychelles"), makeNimstrLit("Sierra Leone"), makeNimstrLit("Singapore"), makeNimstrLit("Slovakia"), makeNimstrLit("Slovenia"), makeNimstrLit("Solomon Islands"), makeNimstrLit("Somalia"), makeNimstrLit("South Africa"), makeNimstrLit("South Sudan"), makeNimstrLit("Spain"), makeNimstrLit("Sri Lanka"), makeNimstrLit("Sudan"), makeNimstrLit("Suriname"), makeNimstrLit("Swaziland"), makeNimstrLit("Sweden"), makeNimstrLit("Switzerland"), makeNimstrLit("Syria"), makeNimstrLit("Taiwan"), makeNimstrLit("Tajikistan"), makeNimstrLit("Tanzania"), makeNimstrLit("Thailand"), makeNimstrLit("Togo"), makeNimstrLit("Tonga"), makeNimstrLit("Trinidad & Tobago"), makeNimstrLit("Tunisia"), makeNimstrLit("Turkey"), makeNimstrLit("Turkmenistan"), makeNimstrLit("Tuvalu"), makeNimstrLit("Uganda"), makeNimstrLit("Ukraine"), makeNimstrLit("United Arab Emirates"), makeNimstrLit("United Kingdom"), makeNimstrLit("United States"), makeNimstrLit("Uruguay"), makeNimstrLit("Uzbekistan"), makeNimstrLit("Vanuatu"), makeNimstrLit("Vatican City"), makeNimstrLit("Venezuela"), makeNimstrLit("Vietnam"), makeNimstrLit("Yemen"), makeNimstrLit("Zambia"), makeNimstrLit("Zimbabwe")];
+            var Countries_1375731725 = [makeNimstrLit("Afghanistan"), makeNimstrLit("Albania"), makeNimstrLit("Algeria"), makeNimstrLit("Andorra"), makeNimstrLit("Angola"), makeNimstrLit("Antigua & Deps"), makeNimstrLit("Argentina"), makeNimstrLit("Armenia"), makeNimstrLit("Australia"), makeNimstrLit("Austria"), makeNimstrLit("Azerbaijan"), makeNimstrLit("Bahamas"), makeNimstrLit("Bahrain"), makeNimstrLit("Bangladesh"), makeNimstrLit("Barbados"), makeNimstrLit("Belarus"), makeNimstrLit("Belgium"), makeNimstrLit("Belize"), makeNimstrLit("Benin"), makeNimstrLit("Bhutan"), makeNimstrLit("Bolivia"), makeNimstrLit("Bosnia Herzegovina"), makeNimstrLit("Botswana"), makeNimstrLit("Brazil"), makeNimstrLit("Brunei"), makeNimstrLit("Bulgaria"), makeNimstrLit("Burkina"), makeNimstrLit("Burundi"), makeNimstrLit("Cambodia"), makeNimstrLit("Cameroon"), makeNimstrLit("Canada"), makeNimstrLit("Cape Verde"), makeNimstrLit("Central African Rep"), makeNimstrLit("Chad"), makeNimstrLit("Chile"), makeNimstrLit("China"), makeNimstrLit("Colombia"), makeNimstrLit("Comoros"), makeNimstrLit("Congo"), makeNimstrLit("Congo {Democratic Rep}"), makeNimstrLit("Costa Rica"), makeNimstrLit("Croatia"), makeNimstrLit("Cuba"), makeNimstrLit("Cyprus"), makeNimstrLit("Czech Republic"), makeNimstrLit("Denmark"), makeNimstrLit("Djibouti"), makeNimstrLit("Dominica"), makeNimstrLit("Dominican Republic"), makeNimstrLit("East Timor"), makeNimstrLit("Ecuador"), makeNimstrLit("Egypt"), makeNimstrLit("El Salvador"), makeNimstrLit("Equatorial Guinea"), makeNimstrLit("Eritrea"), makeNimstrLit("Estonia"), makeNimstrLit("Ethiopia"), makeNimstrLit("Fiji"), makeNimstrLit("Finland"), makeNimstrLit("France"), makeNimstrLit("Gabon"), makeNimstrLit("Gambia"), makeNimstrLit("Georgia"), makeNimstrLit("Germany"), makeNimstrLit("Ghana"), makeNimstrLit("Greece"), makeNimstrLit("Grenada"), makeNimstrLit("Guatemala"), makeNimstrLit("Guinea"), makeNimstrLit("Guinea-Bissau"), makeNimstrLit("Guyana"), makeNimstrLit("Haiti"), makeNimstrLit("Honduras"), makeNimstrLit("Hungary"), makeNimstrLit("Iceland"), makeNimstrLit("India"), makeNimstrLit("Indonesia"), makeNimstrLit("Iran"), makeNimstrLit("Iraq"), makeNimstrLit("Ireland {Republic}"), makeNimstrLit("Israel"), makeNimstrLit("Italy"), makeNimstrLit("Ivory Coast"), makeNimstrLit("Jamaica"), makeNimstrLit("Japan"), makeNimstrLit("Jordan"), makeNimstrLit("Kazakhstan"), makeNimstrLit("Kenya"), makeNimstrLit("Kiribati"), makeNimstrLit("Korea North"), makeNimstrLit("Korea South"), makeNimstrLit("Kosovo"), makeNimstrLit("Kuwait"), makeNimstrLit("Kyrgyzstan"), makeNimstrLit("Laos"), makeNimstrLit("Latvia"), makeNimstrLit("Lebanon"), makeNimstrLit("Lesotho"), makeNimstrLit("Liberia"), makeNimstrLit("Libya"), makeNimstrLit("Liechtenstein"), makeNimstrLit("Lithuania"), makeNimstrLit("Luxembourg"), makeNimstrLit("Macedonia"), makeNimstrLit("Madagascar"), makeNimstrLit("Malawi"), makeNimstrLit("Malaysia"), makeNimstrLit("Maldives"), makeNimstrLit("Mali"), makeNimstrLit("Malta"), makeNimstrLit("Marshall Islands"), makeNimstrLit("Mauritania"), makeNimstrLit("Mauritius"), makeNimstrLit("Mexico"), makeNimstrLit("Micronesia"), makeNimstrLit("Moldova"), makeNimstrLit("Monaco"), makeNimstrLit("Mongolia"), makeNimstrLit("Montenegro"), makeNimstrLit("Morocco"), makeNimstrLit("Mozambique"), makeNimstrLit("Myanmar, {Burma}"), makeNimstrLit("Namibia"), makeNimstrLit("Nauru"), makeNimstrLit("Nepal"), makeNimstrLit("Netherlands"), makeNimstrLit("New Zealand"), makeNimstrLit("Nicaragua"), makeNimstrLit("Niger"), makeNimstrLit("Nigeria"), makeNimstrLit("Norway"), makeNimstrLit("Oman"), makeNimstrLit("Pakistan"), makeNimstrLit("Palau"), makeNimstrLit("Panama"), makeNimstrLit("Papua New Guinea"), makeNimstrLit("Paraguay"), makeNimstrLit("Peru"), makeNimstrLit("Philippines"), makeNimstrLit("Poland"), makeNimstrLit("Portugal"), makeNimstrLit("Qatar"), makeNimstrLit("Romania"), makeNimstrLit("Russian Federation"), makeNimstrLit("Rwanda"), makeNimstrLit("St Kitts & Nevis"), makeNimstrLit("St Lucia"), makeNimstrLit("Saint Vincent & the Grenadines"), makeNimstrLit("Samoa"), makeNimstrLit("San Marino"), makeNimstrLit("Sao Tome & Principe"), makeNimstrLit("Saudi Arabia"), makeNimstrLit("Senegal"), makeNimstrLit("Serbia"), makeNimstrLit("Seychelles"), makeNimstrLit("Sierra Leone"), makeNimstrLit("Singapore"), makeNimstrLit("Slovakia"), makeNimstrLit("Slovenia"), makeNimstrLit("Solomon Islands"), makeNimstrLit("Somalia"), makeNimstrLit("South Africa"), makeNimstrLit("South Sudan"), makeNimstrLit("Spain"), makeNimstrLit("Sri Lanka"), makeNimstrLit("Sudan"), makeNimstrLit("Suriname"), makeNimstrLit("Swaziland"), makeNimstrLit("Sweden"), makeNimstrLit("Switzerland"), makeNimstrLit("Syria"), makeNimstrLit("Taiwan"), makeNimstrLit("Tajikistan"), makeNimstrLit("Tanzania"), makeNimstrLit("Thailand"), makeNimstrLit("Togo"), makeNimstrLit("Tonga"), makeNimstrLit("Trinidad & Tobago"), makeNimstrLit("Tunisia"), makeNimstrLit("Turkey"), makeNimstrLit("Turkmenistan"), makeNimstrLit("Tuvalu"), makeNimstrLit("Uganda"), makeNimstrLit("Ukraine"), makeNimstrLit("United Arab Emirates"), makeNimstrLit("United Kingdom"), makeNimstrLit("United States"), makeNimstrLit("Uruguay"), makeNimstrLit("Uzbekistan"), makeNimstrLit("Vanuatu"), makeNimstrLit("Vatican City"), makeNimstrLit("Venezuela"), makeNimstrLit("Vietnam"), makeNimstrLit("Yemen"), makeNimstrLit("Zambia"), makeNimstrLit("Zimbabwe")];
 if (!Math.trunc) {
   Math.trunc = function(v) {
     v = +v;
@@ -1352,7 +1352,7 @@ var gid_637534819 = [0];
 var objectID_1174405282 = [0];
 var vcomponents_671088653 = [{}];
 var kxi__ = null;
-var articles_1342177285 = [[makeNimstrLit("<h1>OSS Made Me a Better Developer</h1>\x0A\x0A<p>Switching to Linux and using OSS made me a better developer. Before I go on to explain why, let me first say that I think of myself as more of a pragmatic person who takes more nuance and balanced views on software. That being said, I do think that calling one self a pragmatist is often just a meaningless phrase for saying that my balance is the right one. Basically, using open source should depend on your use case and I believe that you don&rsquo;t need to use open source to be a good developer or that you should always use open source. However, I do think that there are many reason that developers especially should be using a lot more open source software than they currently do. Also, a bit of a warning, I give a lot of retrospective. This is a bit of a story about my journey and how I got to where I am now. Be prepared for meandering its part of the fun.</p>\x0A\x0A<h2>Why I switched to Linux</h2>\x0A\x0A<p>My first introduction to Linux was with my father who when I was very young introduced me to Ubuntu and taught me how to install it sometime during my middle school years. I remember that I was not very outwardly excited to put Ubuntu on it but I was interested in running it. And technically, that was not my truly first introduction which was actually Android. However, I am not going to count this as it isn&rsquo;t a desktop operating system. Back to the story, My father showed me how to install an ISO using a USB drive and mount it using Rufus. That was my first introduction to Ubuntu. I don&rsquo;t remember the year but it was probably about 2013 or so. Maybe a bit before or after. I wanted to use Ubuntu because I did not really like Windows 8 and I wanted to upgrade to using something else.</p>\x0A\x0A<p>I did not really understand that much about software at the time it was mostly just a desire out of curiousity for something else in user space and this initial experience made me more confident that I could customize my computer to a degree I had not experienced on windows and gave me more confidence to install custom software on my phone.</p>\x0A\x0A<p>I did not really use Linux for a long time after that first experience. I did not really have too much of a reason to use after the release of windows 10 when I got my new computer. This lends me to the current view point I have: That windows is probably good enough on the user side. There just aren&rsquo;t that many compelling reason for many user to switch to Linux on the desktop right now. You may disagree with me. Please do, I love to argue. Send me a message on Mastodon or something. Link is in the footer.</p>\x0A\x0A<h3>Why I eventually stuck with Linux</h3>\x0A\x0A<p>Now, my initial switch to Linux was not a really compelling reason to switch. It was more of an anecdote to why I had choosen to switch at the time and It was really meant to illustrate a contrasting experience I had when I entered the developer space.</p>\x0A\x0A<p>I had dual booted Ubuntu on my machine once I finally built my own computer for the first time. At the time it was the cost of purchasing Windows that held me back along with the fact I could get most things running on Ubuntu. This was in 2018. I had finally got enough money from a job building hospital doors at some furniture company. Along with willing to shoulder a bit of credit card debt. It was a pretty nice machine. I had a ryzen 2700x, 16gb of ddr4 ram, 500gb nvme drive (those were expensive then). And a brand new radeon 5700 (I could not afford the xt). Hindsight I bought in just about the right time since the whole pandemic thing would happen in two years driving GPUs and the rest sky high. I could finally play Overwatch. Yes, it was basically not cool to play by then. And most people had abandoned playing it by the time that I started. But I had shit tons of fun playing it with friends regardless. And I didn&rsquo;t experience any of the toxicity&hellip; Because my microphone and headphones didn&rsquo;t work with it \xF0\x9F\xA4\xA3. What may appear first as a curse is a blessing. The only people that I could talk to was friends playing with me on Discord.</p>\x0A\x0A<p>After fooling around for about a year and half, I decided I wanted to get serious about learning to program sometime in late 2019(I had casually done programming and development when I was younger and done some beginner courses with it but never decided yeah I want this as a career). And oh boy, did I get the time. As we all know what was about to happen soon. About one year after teaching myself a few things with python and doing some light development in Java. I stumbled upon a Bootcamp scholarship. It was here that they <em>required</em> you to use Linux. I had to use Ubuntu. I had to use Vagrant. I had to use the terminal. I had to use git. While I had use git a bit before I never really got used to programming so often daily. I never got used to using the terminal so frequently.</p>\x0A\x0A<p>Using these frequently did wonders to the rate that I improved as a developer. The key to it was other people that I was invovled with using similar tools or the same. Sometime during the end of the camp I had switched to using windows with WSL and I just had loads of annoyances. Powershell felt just so much more clunky than bash or fish. And being forced to use WSL for some application and the same apps not working with my regular cmd or powershell was just frustrating. On Linux, my developers tools&hellip; well they just worked. On Windows they had a thousand workarounds, older versions of packages. And configuring your path was a nightmare. I did learn things that helped me work through this on windows but it just never felt as smooth as on Linux. The open source community had largely developed open source software for other open source software. Go figure.</p>\x0A\x0A<p>I decided that If I was starting to use WSL for almost everything I might as well just use Linux. I had been using Linux for a while and I had been using it for development. I had been using it for my personal projects. I had been using it for my work. It was time to switch. This time maybe for good. I had heard that Linux gaming had vastly improved since the launch of the Steamdeck. So I didn&rsquo;t have that many reasons to stay on windows. But really what finally made me switch was just the amount of memory programs seemed to take on idle in windows. My computer just didn&rsquo;t feel even close to as snappy as it did on Linux. My first few days after I got my new software engineering job, my computer was basically unusable. So I made the switch.</p>\x0A\x0A<h2>Enough about Linux, what about other open source software?</h2>\x0A\x0A<p>Yeah this really isn&rsquo;t just a post about how using Linux made me a better developer, it is about how open source software as a whole did and continues to do so. So let&rsquo;s talk more about that. I think some of key things to pay attention to in the story I was telling you is that a lot of open source software tends to work better with other software that is also open source. This really should not be such a surprise but you don&rsquo;t really get it till you get it. Ya know? You have to live it to realize it. Or maybe I could do some data analysis instead of giving vaguaries. Nah, that&rsquo;s a project for another time.</p>\x0A\x0A<p>I think the key to this is that open source software is developed by people who are passionate about the software. They are not trying to make a quick buck off of you. They are not trying to make a quick buck off of your data. And all that bleeds into the software. Kind of like the difference between a home cooked meal and one from a restaurant. The restaurant is trying to make a quick buck. The home cooked meal is made with love. And you can taste the difference. Or maybe in a less cheesy way, a home cooked meal is made for you and people like you. You can cater to their needs specifically without worrying about whether others will like it and if you are sharing it for the community in a pot luck you can get tips and tricks on how to make it better much faster. Oh and people can bring things that compliment the meal you brought.</p>\x0A\x0A<p>As analogies only go so far I think it is time to put this one to rest. You can think of using open source software as a way into a close community of developers. They can help you in more ways then just fixing bugs. They can help you with your career. They can help you with your personal projects. I think that is more important than almost any other reason to use open source. While you can find these things else where they are just so accessable if you are looking for help as a developer in Open source communities.</p>\x0A\x0A<h2>Developing for open source made me a better developer</h2>\x0A\x0A<p>Being involved in the open source community lends you the confidence that you too can change and add value to people&rsquo;s lives through software. It also gives you a lot of examples about how to create a project in general. For example, I learned a ton about licensing and software law because of open source. The difference between a Mozilla Public license versus a Affero Gnu Public License or a MIT versus a Apache License. It taught me how to explain what I am building and creating to other engineers and non-engineers in a clear and concise way. It made it easy to make habits for making sure my code was readable so that when someone wanted to contribute to the source code they could more easily understand it. I also learned how to write documentation. How to create a roadmap of features. I learned why you really want to limit dependencies or the size of your binaries. When you are developing open source you are expected to be maintaining it. So sustainable choices become much more important to you.</p>\x0A\x0A<p>You also learn the benefit of testing and Continuous Integration as each pull request is tested and reviewed by other developers. Because the open source community is very much in favour of feedback and the sharing of code to make software just better, it gave me a lot of practice in receiving and giving feedback and code reviews. Something that many developers dread outside the open source community. It was exciting in the community because only people interested in making your project better would usually take the time to give you that feedback. And you would be able to see the improvements that they made to your project. It is a great way to learn and grow quickly as a developer.</p>\x0A\x0A<p>When I compare myself to my peers who did not get invovled in open source I see this very large gap in these types of skills. They are not bad developers. They just don&rsquo;t tend to practice these sorts of skills as much. I think that this is a shame because these skills are much more closely linked to what you will be doing in your career as a developer, especially when you will be creating your own projects and businesses. I think that open source really is one of the best ways to get experience and practice in software engineering.</p>\x0A\x0A<p>As a developer, I know firsthand the value of open source software. It&rsquo;s allowed me to learn from other developers\' code, contribute to existing projects, and create my own applications without reinventing the wheel. Open source has empowered developers like me to innovate, collaborate, and make the world a better place through technology.</p>\x0A\x0A<p>While Linux is undoubtedly a significant part of the open source ecosystem, it&rsquo;s important to remember that open source is much more than just one operating system. From web frameworks to databases to machine learning libraries, open source powers a vast array of tools that developers rely on every day. By contributing to and using open source software, developers can harness the collective power of the community to create better, more reliable software.</p>\x0A\x0A<p>I believe that the future of software development lies in open source. As more and more developers recognize the benefits of open collaboration, we&rsquo;ll see even more incredible innovations emerge from the open source community. Whether you&rsquo;re a seasoned developer or just starting out, I encourage you to get involved in open source projects and experience the power of collaborative software development for yourself.</p>\x0A\x0A<h2>Conclusion</h2>\x0A\x0A<p>Open source is not just a buzzword or a trend in the tech industry. It represents a fundamental shift in the way we create and share software. By leveraging the power of collaborative development and community-driven innovation, open source has revolutionized the software industry and empowered developers to build amazing products that are accessible to everyone.</p>\x0A\x0A<p>As a developer, embracing open source is not just a matter of ideology, but also a practical decision that can benefit your career and your skills. Contributing to open source projects can help you sharpen your coding skills, build your reputation and network, and gain experience with cutting-edge technologies.</p>\x0A\x0A<p>Of course, open source is not without its challenges and drawbacks. It really requires you to engage with a community of other developers and forces more transparent processes. You really may struggle from getting feedback. You may also struggle gaining funding and support even when your project is so important to so many people. However, these challenges are far outweighed by the benefits that open source can offer, both for individual developers and for the software industry as a whole.</p>\x0A\x0A<p>In short, if you&rsquo;re a developer who wants to make a difference and contribute to the wider community, open source is the way to go. By working together with like-minded developers, you can create amazing software that has the potential to change the world. So go ahead, join an open source project today, and experience the power of collaborative development for yourself!</p>\x0A\x0A<p><code>If you are interested in learing more about my experience with open source software and how it has helped me become a better developer, I plan on writing a second part to this going into specific examples. Remember that I love to get feedback. So if you have any further questions or comments please feel free to reach out. Links in the footer</code></p>")]];
+var stuff_1342177283 = [makeNimstrLit("<h1>OSS Made Me a Better Developer</h1>\x0A\x0A<p>Switching to Linux and using OSS made me a better developer. Before I go on to explain why, let me first say that I think of myself as more of a pragmatic person who takes more nuance and balanced views on software. That being said, I do think that calling one self a pragmatist is often just a meaningless phrase for saying that my balance is the right one. Basically, using open source should depend on your use case and I believe that you don&rsquo;t need to use open source to be a good developer or that you should always use open source. However, I do think that there are many reason that developers especially should be using a lot more open source software than they currently do. Also, a bit of a warning, I give a lot of retrospective. This is a bit of a story about my journey and how I got to where I am now. Be prepared for meandering its part of the fun.</p>\x0A\x0A<h2>Why I switched to Linux</h2>\x0A\x0A<p>My first introduction to Linux was with my father who when I was very young introduced me to Ubuntu and taught me how to install it sometime during my middle school years. I remember that I was not very outwardly excited to put Ubuntu on it but I was interested in running it. And technically, that was not my truly first introduction which was actually Android. However, I am not going to count this as it isn&rsquo;t a desktop operating system. Back to the story, My father showed me how to install an ISO using a USB drive and mount it using Rufus. That was my first introduction to Ubuntu. I don&rsquo;t remember the year but it was probably about 2013 or so. Maybe a bit before or after. I wanted to use Ubuntu because I did not really like Windows 8 and I wanted to upgrade to using something else.</p>\x0A\x0A<p>I did not really understand that much about software at the time it was mostly just a desire out of curiousity for something else in user space and this initial experience made me more confident that I could customize my computer to a degree I had not experienced on windows and gave me more confidence to install custom software on my phone.</p>\x0A\x0A<p>I did not really use Linux for a long time after that first experience. I did not really have too much of a reason to use after the release of windows 10 when I got my new computer. This lends me to the current view point I have: That windows is probably good enough on the user side. There just aren&rsquo;t that many compelling reason for many user to switch to Linux on the desktop right now. You may disagree with me. Please do, I love to argue. Send me a message on Mastodon or something. Link is in the footer.</p>\x0A\x0A<h3>Why I eventually stuck with Linux</h3>\x0A\x0A<p>Now, my initial switch to Linux was not a really compelling reason to switch. It was more of an anecdote to why I had choosen to switch at the time and It was really meant to illustrate a contrasting experience I had when I entered the developer space.</p>\x0A\x0A<p>I had dual booted Ubuntu on my machine once I finally built my own computer for the first time. At the time it was the cost of purchasing Windows that held me back along with the fact I could get most things running on Ubuntu. This was in 2018. I had finally got enough money from a job building hospital doors at some furniture company. Along with willing to shoulder a bit of credit card debt. It was a pretty nice machine. I had a ryzen 2700x, 16gb of ddr4 ram, 500gb nvme drive (those were expensive then). And a brand new radeon 5700 (I could not afford the xt). Hindsight I bought in just about the right time since the whole pandemic thing would happen in two years driving GPUs and the rest sky high. I could finally play Overwatch. Yes, it was basically not cool to play by then. And most people had abandoned playing it by the time that I started. But I had shit tons of fun playing it with friends regardless. And I didn&rsquo;t experience any of the toxicity&hellip; Because my microphone and headphones didn&rsquo;t work with it \xF0\x9F\xA4\xA3. What may appear first as a curse is a blessing. The only people that I could talk to was friends playing with me on Discord.</p>\x0A\x0A<p>After fooling around for about a year and half, I decided I wanted to get serious about learning to program sometime in late 2019(I had casually done programming and development when I was younger and done some beginner courses with it but never decided yeah I want this as a career). And oh boy, did I get the time. As we all know what was about to happen soon. About one year after teaching myself a few things with python and doing some light development in Java. I stumbled upon a Bootcamp scholarship. It was here that they <em>required</em> you to use Linux. I had to use Ubuntu. I had to use Vagrant. I had to use the terminal. I had to use git. While I had use git a bit before I never really got used to programming so often daily. I never got used to using the terminal so frequently.</p>\x0A\x0A<p>Using these frequently did wonders to the rate that I improved as a developer. The key to it was other people that I was invovled with using similar tools or the same. Sometime during the end of the camp I had switched to using windows with WSL and I just had loads of annoyances. Powershell felt just so much more clunky than bash or fish. And being forced to use WSL for some application and the same apps not working with my regular cmd or powershell was just frustrating. On Linux, my developers tools&hellip; well they just worked. On Windows they had a thousand workarounds, older versions of packages. And configuring your path was a nightmare. I did learn things that helped me work through this on windows but it just never felt as smooth as on Linux. The open source community had largely developed open source software for other open source software. Go figure.</p>\x0A\x0A<p>I decided that If I was starting to use WSL for almost everything I might as well just use Linux. I had been using Linux for a while and I had been using it for development. I had been using it for my personal projects. I had been using it for my work. It was time to switch. This time maybe for good. I had heard that Linux gaming had vastly improved since the launch of the Steamdeck. So I didn&rsquo;t have that many reasons to stay on windows. But really what finally made me switch was just the amount of memory programs seemed to take on idle in windows. My computer just didn&rsquo;t feel even close to as snappy as it did on Linux. My first few days after I got my new software engineering job, my computer was basically unusable. So I made the switch.</p>\x0A\x0A<h2>Enough about Linux, what about other open source software?</h2>\x0A\x0A<p>Yeah this really isn&rsquo;t just a post about how using Linux made me a better developer, it is about how open source software as a whole did and continues to do so. So let&rsquo;s talk more about that. I think some of key things to pay attention to in the story I was telling you is that a lot of open source software tends to work better with other software that is also open source. This really should not be such a surprise but you don&rsquo;t really get it till you get it. Ya know? You have to live it to realize it. Or maybe I could do some data analysis instead of giving vaguaries. Nah, that&rsquo;s a project for another time.</p>\x0A\x0A<p>I think the key to this is that open source software is developed by people who are passionate about the software. They are not trying to make a quick buck off of you. They are not trying to make a quick buck off of your data. And all that bleeds into the software. Kind of like the difference between a home cooked meal and one from a restaurant. The restaurant is trying to make a quick buck. The home cooked meal is made with love. And you can taste the difference. Or maybe in a less cheesy way, a home cooked meal is made for you and people like you. You can cater to their needs specifically without worrying about whether others will like it and if you are sharing it for the community in a pot luck you can get tips and tricks on how to make it better much faster. Oh and people can bring things that compliment the meal you brought.</p>\x0A\x0A<p>As analogies only go so far I think it is time to put this one to rest. You can think of using open source software as a way into a close community of developers. They can help you in more ways then just fixing bugs. They can help you with your career. They can help you with your personal projects. I think that is more important than almost any other reason to use open source. While you can find these things else where they are just so accessable if you are looking for help as a developer in Open source communities.</p>\x0A\x0A<h2>Developing for open source made me a better developer</h2>\x0A\x0A<p>Being involved in the open source community lends you the confidence that you too can change and add value to people&rsquo;s lives through software. It also gives you a lot of examples about how to create a project in general. For example, I learned a ton about licensing and software law because of open source. The difference between a Mozilla Public license versus a Affero Gnu Public License or a MIT versus a Apache License. It taught me how to explain what I am building and creating to other engineers and non-engineers in a clear and concise way. It made it easy to make habits for making sure my code was readable so that when someone wanted to contribute to the source code they could more easily understand it. I also learned how to write documentation. How to create a roadmap of features. I learned why you really want to limit dependencies or the size of your binaries. When you are developing open source you are expected to be maintaining it. So sustainable choices become much more important to you.</p>\x0A\x0A<p>You also learn the benefit of testing and Continuous Integration as each pull request is tested and reviewed by other developers. Because the open source community is very much in favour of feedback and the sharing of code to make software just better, it gave me a lot of practice in receiving and giving feedback and code reviews. Something that many developers dread outside the open source community. It was exciting in the community because only people interested in making your project better would usually take the time to give you that feedback. And you would be able to see the improvements that they made to your project. It is a great way to learn and grow quickly as a developer.</p>\x0A\x0A<p>When I compare myself to my peers who did not get invovled in open source I see this very large gap in these types of skills. They are not bad developers. They just don&rsquo;t tend to practice these sorts of skills as much. I think that this is a shame because these skills are much more closely linked to what you will be doing in your career as a developer, especially when you will be creating your own projects and businesses. I think that open source really is one of the best ways to get experience and practice in software engineering.</p>\x0A\x0A<p>As a developer, I know firsthand the value of open source software. It&rsquo;s allowed me to learn from other developers\' code, contribute to existing projects, and create my own applications without reinventing the wheel. Open source has empowered developers like me to innovate, collaborate, and make the world a better place through technology.</p>\x0A\x0A<p>While Linux is undoubtedly a significant part of the open source ecosystem, it&rsquo;s important to remember that open source is much more than just one operating system. From web frameworks to databases to machine learning libraries, open source powers a vast array of tools that developers rely on every day. By contributing to and using open source software, developers can harness the collective power of the community to create better, more reliable software.</p>\x0A\x0A<p>I believe that the future of software development lies in open source. As more and more developers recognize the benefits of open collaboration, we&rsquo;ll see even more incredible innovations emerge from the open source community. Whether you&rsquo;re a seasoned developer or just starting out, I encourage you to get involved in open source projects and experience the power of collaborative software development for yourself.</p>\x0A\x0A<h2>Conclusion</h2>\x0A\x0A<p>Open source is not just a buzzword or a trend in the tech industry. It represents a fundamental shift in the way we create and share software. By leveraging the power of collaborative development and community-driven innovation, open source has revolutionized the software industry and empowered developers to build amazing products that are accessible to everyone.</p>\x0A\x0A<p>As a developer, embracing open source is not just a matter of ideology, but also a practical decision that can benefit your career and your skills. Contributing to open source projects can help you sharpen your coding skills, build your reputation and network, and gain experience with cutting-edge technologies.</p>\x0A\x0A<p>Of course, open source is not without its challenges and drawbacks. It really requires you to engage with a community of other developers and forces more transparent processes. You really may struggle from getting feedback. You may also struggle gaining funding and support even when your project is so important to so many people. However, these challenges are far outweighed by the benefits that open source can offer, both for individual developers and for the software industry as a whole.</p>\x0A\x0A<p>In short, if you&rsquo;re a developer who wants to make a difference and contribute to the wider community, open source is the way to go. By working together with like-minded developers, you can create amazing software that has the potential to change the world. So go ahead, join an open source project today, and experience the power of collaborative development for yourself!</p>\x0A\x0A<p><code>If you are interested in learing more about my experience with open source software and how it has helped me become a better developer, I plan on writing a second part to this going into specific examples. Remember that I love to get feedback. So if you have any further questions or comments please feel free to reach out. Links in the footer</code></p>")];
 
 function add_33556419(x_33556420, x_33556420_Idx, y_33556421) {
           if (x_33556420[x_33556420_Idx] === null) { x_33556420[x_33556420_Idx] = []; }
@@ -1424,13 +1424,13 @@ function addChars_251658415(result_251658417, result_251658417_Idx, x_251658418,
     (result_251658417[result_251658417_Idx].length = chckRange(addInt(old_251658421, n_251658420), 0, 2147483647));
     Label1: do {
       var iHEX60gensym4_251658435 = 0;
-      var i_1493172263 = 0;
+      var i_1442840615 = 0;
       Label2: do {
           Label3: while (true) {
-          if (!(i_1493172263 < n_251658420)) break Label3;
-            iHEX60gensym4_251658435 = i_1493172263;
+          if (!(i_1442840615 < n_251658420)) break Label3;
+            iHEX60gensym4_251658435 = i_1442840615;
             result_251658417[result_251658417_Idx][chckIndx(addInt(old_251658421, iHEX60gensym4_251658435), 0, (result_251658417[result_251658417_Idx]).length - 1)] = x_251658418.charCodeAt(chckIndx(addInt(start_251658419, iHEX60gensym4_251658435), 0, (x_251658418).length - 1));
-            i_1493172263 = addInt(i_1493172263, 1);
+            i_1442840615 = addInt(i_1442840615, 1);
           }
       } while (false);
     } while (false);
@@ -1518,23 +1518,23 @@ function raiseIndexError(i_33556754, a_33556755, b_33556756) {
   
 }
 
-function strConv_1493172225(list_1493172226) {
-  var result_1493172227 = [];
+function strConv_1442840577(list_1442840578) {
+  var result_1442840579 = [];
 
     Label1: do {
-      var item_1493172231 = [];
-      var i_1493172257 = 0;
+      var item_1442840583 = [];
+      var i_1442840609 = 0;
       Label2: do {
           Label3: while (true) {
-          if (!(i_1493172257 < (list_1493172226).length)) break Label3;
-            item_1493172231 = list_1493172226[chckIndx(i_1493172257, 0, (list_1493172226).length - 1)];
-            result_1493172227.push.apply(result_1493172227, item_1493172231);;
-            i_1493172257 = addInt(i_1493172257, 1);
+          if (!(i_1442840609 < (list_1442840578).length)) break Label3;
+            item_1442840583 = list_1442840578[chckIndx(i_1442840609, 0, (list_1442840578).length - 1)];
+            result_1442840579.push.apply(result_1442840579, item_1442840583);;
+            i_1442840609 = addInt(i_1442840609, 1);
           }
       } while (false);
     } while (false);
 
-  return result_1493172227;
+  return result_1442840579;
 
 }
 
@@ -1555,22 +1555,22 @@ function failedAssertImpl_218103864(msg_218103865) {
 
   
 }
-if (!(eqStrings(strConv_1493172225([makeNimstrLit("1"), makeNimstrLit("2"), makeNimstrLit("3")]), makeNimstrLit("123")))) {
+if (!(eqStrings(strConv_1442840577([makeNimstrLit("1"), makeNimstrLit("2"), makeNimstrLit("3")]), makeNimstrLit("123")))) {
 failedAssertImpl_218103864(makeNimstrLit("helpers.nim(6, 8) `strConv(1, 2, 3) == \"123\"` "));
 }
 
-if (!(eqStrings(strConv_1493172225([makeNimstrLit("1"), makeNimstrLit("2"), makeNimstrLit("3")]), makeNimstrLit("123")))) {
+if (!(eqStrings(strConv_1442840577([makeNimstrLit("1"), makeNimstrLit("2"), makeNimstrLit("3")]), makeNimstrLit("123")))) {
 failedAssertImpl_218103864(makeNimstrLit("helpers.nim(7, 8) `strConv(\"1\", \"2\", \"3\") == \"123\"` "));
 }
 
-if (!(eqStrings(strConv_1493172225([makeNimstrLit("1"), makeNimstrLit("2"), makeNimstrLit("3")]), makeNimstrLit("123")))) {
+if (!(eqStrings(strConv_1442840577([makeNimstrLit("1"), makeNimstrLit("2"), makeNimstrLit("3")]), makeNimstrLit("123")))) {
 failedAssertImpl_218103864(makeNimstrLit("helpers.nim(8, 8) `strConv(1, \"2\", 3) == \"123\"` "));
 }
 
-var media_1543503880 = [[]];
-media_1543503880[0] = nimCopy(null, [{Field0: makeNimstrLit("mastodon"), Field1: makeNimstrLit("https://mastodon.online/@dio")}, {Field0: makeNimstrLit("github"), Field1: makeNimstrLit("https://github.com/Diogenesoftoronto/")}, {Field0: makeNimstrLit("linkedin"), Field1: makeNimstrLit("https://www.linkedin.com/in/keith-noel-a06092a1/")}, {Field0: makeNimstrLit("youtube"), Field1: makeNimstrLit("https://youtube.com/@KManAbout")}, {Field0: makeNimstrLit("reddit"), Field1: makeNimstrLit("https://www.reddit.com/user/Obnoxious_pedant")}, {Field0: makeNimstrLit("patreon"), Field1: makeNimstrLit("https://www.patreon.com/dio_of_6")}], NTI1543503890);
+var media_1493172232 = [[]];
+media_1493172232[0] = nimCopy(null, [{Field0: makeNimstrLit("mastodon"), Field1: makeNimstrLit("https://mastodon.online/@dio")}, {Field0: makeNimstrLit("github"), Field1: makeNimstrLit("https://github.com/Diogenesoftoronto/")}, {Field0: makeNimstrLit("linkedin"), Field1: makeNimstrLit("https://www.linkedin.com/in/keith-noel-a06092a1/")}, {Field0: makeNimstrLit("youtube"), Field1: makeNimstrLit("https://youtube.com/@KManAbout")}, {Field0: makeNimstrLit("reddit"), Field1: makeNimstrLit("https://www.reddit.com/user/Obnoxious_pedant")}, {Field0: makeNimstrLit("patreon"), Field1: makeNimstrLit("https://www.patreon.com/dio_of_6")}], NTI1493172242);
 var Github_1275068428 = [({name: [], repos: [], stars: 0, commits: 0})];
-Github_1275068428[0] = nimCopy(Github_1275068428[0], {name: makeNimstrLit("Github"), repos: [], stars: 0, commits: 0}, NTI1476395011);
+Github_1275068428[0] = nimCopy(Github_1275068428[0], {name: makeNimstrLit("Github"), repos: [], stars: 0, commits: 0}, NTI1426063363);
 var show_1275068443 = [0];
 
 function newSeq_603980808(len_603980810) {
@@ -2984,38 +2984,38 @@ function nsuCapitalizeAscii(s_771752039) {
 
 }
 
-function makeNavigation_1526726662(data_1526726663) {
-  var result_1526726664 = null;
+function makeNavigation_1476395014(data_1476395015) {
+  var result_1476395016 = null;
 
-    var tmp_1526726665 = tree_637534986(18, []);
-    tmp_1526726665.class = "container-fluid";
-    var tmp_1526726666 = tree_637534986(37, []);
-    var tmp_1526726667 = tree_637534986(38, []);
-    var tmp_1526726668 = tree_637534986(45, []);
-    tmp_1526726668.class = "primary";
-    setAttr_637534849(tmp_1526726668, "href", "#/");
-    var tmp_1526726669 = tree_637534986(47, []);
-    tmp_1526726669.class = "lg-text";
-    add_637534923(tmp_1526726669, text_637535038(makeNimstrLit("Nimdude")));
-    add_637534923(tmp_1526726668, tmp_1526726669);
-    add_637534923(tmp_1526726667, tmp_1526726668);
-    add_637534923(tmp_1526726666, tmp_1526726667);
-    add_637534923(tmp_1526726665, tmp_1526726666);
-    var tmp_1526726670 = tree_637534986(37, []);
+    var tmp_1476395017 = tree_637534986(18, []);
+    tmp_1476395017.class = "container-fluid";
+    var tmp_1476395018 = tree_637534986(37, []);
+    var tmp_1476395019 = tree_637534986(38, []);
+    var tmp_1476395020 = tree_637534986(45, []);
+    tmp_1476395020.class = "primary";
+    setAttr_637534849(tmp_1476395020, "href", "#/");
+    var tmp_1476395021 = tree_637534986(47, []);
+    tmp_1476395021.class = "lg-text";
+    add_637534923(tmp_1476395021, text_637535038(makeNimstrLit("Nimdude")));
+    add_637534923(tmp_1476395020, tmp_1476395021);
+    add_637534923(tmp_1476395019, tmp_1476395020);
+    add_637534923(tmp_1476395018, tmp_1476395019);
+    add_637534923(tmp_1476395017, tmp_1476395018);
+    var tmp_1476395022 = tree_637534986(37, []);
     Label1: do {
-      var route_1526726707 = [];
+      var route_1476395059 = [];
       var i_469762164 = 0;
       Label2: do {
           Label3: while (true) {
           if (!true) break Label3;
-            route_1526726707 = Routes_1442840577[chckIndx(i_469762164, 0, (Routes_1442840577).length - 1)];
-            var tmp_1526726671 = tree_637534986(38, []);
-            var tmp_1526726672 = tree_637534986(45, []);
-            tmp_1526726672.class = "secondary";
-            setAttr_637534849(tmp_1526726672, "href", toJSStr((makeNimstrLit("#/") || []).concat(route_1526726707 || [])));
-            add_637534923(tmp_1526726672, text_637535038(nsuCapitalizeAscii(route_1526726707)));
-            add_637534923(tmp_1526726671, tmp_1526726672);
-            add_637534923(tmp_1526726670, tmp_1526726671);
+            route_1476395059 = Routes_1392508929[chckIndx(i_469762164, 0, (Routes_1392508929).length - 1)];
+            var tmp_1476395023 = tree_637534986(38, []);
+            var tmp_1476395024 = tree_637534986(45, []);
+            tmp_1476395024.class = "secondary";
+            setAttr_637534849(tmp_1476395024, "href", toJSStr((makeNimstrLit("#/") || []).concat(route_1476395059 || [])));
+            add_637534923(tmp_1476395024, text_637535038(nsuCapitalizeAscii(route_1476395059)));
+            add_637534923(tmp_1476395023, tmp_1476395024);
+            add_637534923(tmp_1476395022, tmp_1476395023);
             if ((4 <= i_469762164)) {
             break Label2;
             }
@@ -3024,10 +3024,10 @@ function makeNavigation_1526726662(data_1526726663) {
           }
       } while (false);
     } while (false);
-    add_637534923(tmp_1526726665, tmp_1526726670);
-    result_1526726664 = tmp_1526726665;
+    add_637534923(tmp_1476395017, tmp_1476395022);
+    result_1476395016 = tmp_1476395017;
 
-  return result_1526726664;
+  return result_1476395016;
 
 }
 
@@ -3075,479 +3075,462 @@ function verbatim_637535044(s_637535045) {
 
 }
 
-function Articles_1342177286() {
-  var result_1342177287 = null;
+function Articles_1342177284() {
+  var result_1342177285 = null;
 
-    var tmp_1342177288 = tree_637534986(44, []);
-    tmp_1342177288.class = "container";
-    Label1: do {
-      var __1342177334 = 0;
-      var article_1342177335 = [];
-      var i_469762172 = 0;
-      Label2: do {
-          Label3: while (true) {
-          if (!true) break Label3;
-            __1342177334 = i_469762172;
-            article_1342177335 = articles_1342177285[0][chckIndx(i_469762172, 0, (articles_1342177285[0]).length - 1)];
-            add_637534923(tmp_1342177288, verbatim_637535044(article_1342177335));
-            if ((0 <= i_469762172)) {
-            break Label2;
-            }
-            
-            i_469762172 = addInt(i_469762172, 1);
-          }
-      } while (false);
-    } while (false);
-    result_1342177287 = tmp_1342177288;
+    var tmp_1342177286 = tree_637534986(44, []);
+    tmp_1342177286.class = "container";
+    add_637534923(tmp_1342177286, verbatim_637535044(stuff_1342177283[0]));
+    result_1342177285 = tmp_1342177286;
 
-  return result_1342177287;
+  return result_1342177285;
 
 }
 
-function about_1409286147() {
+function about_1358954499() {
+  var result_1358954500 = null;
+
+    var tmp_1358954501 = tree_637534986(44, []);
+    tmp_1358954501.class = "container";
+    var tmp_1358954502 = tree_637534986(21, []);
+    tmp_1358954502.id = "about-me";
+    add_637534923(tmp_1358954502, text_637535038(makeNimstrLit("About Me")));
+    add_637534923(tmp_1358954501, tmp_1358954502);
+    var tmp_1358954503 = tree_637534986(22, []);
+    tmp_1358954503.id = "poetic-introductioncolon";
+    add_637534923(tmp_1358954503, text_637535038(makeNimstrLit("Poetic Introduction:")));
+    add_637534923(tmp_1358954501, tmp_1358954503);
+    var tmp_1358954504 = tree_637534986(35, []);
+    var tmp_1358954505 = tree_637534986(32, []);
+    add_637534923(tmp_1358954504, tmp_1358954505);
+    var tmp_1358954506 = tree_637534986(32, []);
+    add_637534923(tmp_1358954506, text_637535038(makeNimstrLit("I am but a maker in a small Canadian town, Crafting software with rapid-fire,\x0Atrying to hold it down. I am post-anarchist adjacent, or so they say, Though\x0Awhat that means, I cannot truly say.")));
+    add_637534923(tmp_1358954504, tmp_1358954506);
+    var tmp_1358954507 = tree_637534986(32, []);
+    add_637534923(tmp_1358954507, text_637535038(makeNimstrLit("Each day I strive to learn, to keep my skills on the rise, Temporal, Go, and\x0AUnity, I never compromise. Yet humble must I be, for my journey\'s just begun, As\x0Athe horizon of knowledge is wider than the sun.")));
+    add_637534923(tmp_1358954504, tmp_1358954507);
+    var tmp_1358954508 = tree_637534986(32, []);
+    add_637534923(tmp_1358954508, text_637535038(makeNimstrLit("Feline friends I cherish, three in number are they, Ever by my side, as I toil\x0Aand work and play. And when I need respite, from the toil and grind, I dive into\x0Aa litRPGs, or Asimov, to ease my mind.")));
+    add_637534923(tmp_1358954504, tmp_1358954508);
+    var tmp_1358954509 = tree_637534986(32, []);
+    add_637534923(tmp_1358954509, text_637535038(makeNimstrLit("Portfolios, blogs, and multiplayer games, I have many irons in the fire, And I\'m\x0Amaking an app called Write and Tell, my greatest desire. But fame and fortune do\x0Anot move me, nor drive me to excel, For true satisfaction comes from the\x0Adifference we make, and the stories we tell.")));
+    add_637534923(tmp_1358954504, tmp_1358954509);
+    var tmp_1358954510 = tree_637534986(32, []);
+    add_637534923(tmp_1358954510, text_637535038(makeNimstrLit("So raise a glass(of tea), to this humble(the humble never say they are) maker on\x0Athy journey to the stars, With a heart full of hope, and a mind full of scars.\x0AMay I make a difference, and play my part aright, For in the end, it\'s not about\x0Ame, it\'s about making things right.")));
+    add_637534923(tmp_1358954504, tmp_1358954510);
+    add_637534923(tmp_1358954501, tmp_1358954504);
+    var tmp_1358954511 = tree_637534986(22, []);
+    tmp_1358954511.id = "introduction";
+    add_637534923(tmp_1358954511, text_637535038(makeNimstrLit("Introduction")));
+    add_637534923(tmp_1358954501, tmp_1358954511);
+    var tmp_1358954512 = tree_637534986(39, []);
+    tmp_1358954512.class = "docutils";
+    var tmp_1358954513 = tree_637534986(40, []);
+    add_637534923(tmp_1358954513, text_637535038(makeNimstrLit("Introductions are ")));
+    var tmp_1358954514 = tree_637534986(46, []);
+    add_637534923(tmp_1358954514, text_637535038(makeNimstrLit("hard")));
+    add_637534923(tmp_1358954513, tmp_1358954514);
+    add_637534923(tmp_1358954513, text_637535038(makeNimstrLit(". Here is a short one:")));
+    add_637534923(tmp_1358954512, tmp_1358954513);
+    var tmp_1358954515 = tree_637534986(41, []);
+    var tmp_1358954516 = tree_637534986(32, []);
+    add_637534923(tmp_1358954516, text_637535038(makeNimstrLit("I am dio, a PoC software maker and enby (planning to write a whole thing about\x0Athat soon that no one will read) based in a small Canadian town. I love all\x0Athings tech, from contributing to FOSS projects to exploring the world of data\x0Ascience.")));
+    add_637534923(tmp_1358954515, tmp_1358954516);
+    var tmp_1358954517 = tree_637534986(32, []);
+    add_637534923(tmp_1358954517, text_637535038(makeNimstrLit("I also love posting about any philosophy papers. I am post-anarchist adjacent\x0Apolitically \xF0\x9F\x8F\xB4. If you know what that means (because I don\'t), that\'s awesome.")));
+    add_637534923(tmp_1358954515, tmp_1358954517);
+    var tmp_1358954518 = tree_637534986(32, []);
+    add_637534923(tmp_1358954518, text_637535038(makeNimstrLit("When I\'m not coding, you can usually find me lost in virtual reality, tinkering\x0Awith Unity or experimenting with 3D printing. I am sure you and the dozens of\x0Aother similarly politically inclined would be happy for me to tag along in one\x0Aof your reading groups. So if you\'re looking for someone to geek out with about\x0Atech or philosophy, feel free to reach out!")));
+    add_637534923(tmp_1358954515, tmp_1358954518);
+    add_637534923(tmp_1358954512, tmp_1358954515);
+    add_637534923(tmp_1358954501, tmp_1358954512);
+    var tmp_1358954519 = tree_637534986(32, []);
+    add_637534923(tmp_1358954519, text_637535038(makeNimstrLit("Here are some ")));
+    var tmp_1358954520 = tree_637534986(46, []);
+    add_637534923(tmp_1358954520, text_637535038(makeNimstrLit("Rapid-Fire")));
+    add_637534923(tmp_1358954519, tmp_1358954520);
+    add_637534923(tmp_1358954519, text_637535038(makeNimstrLit(" facts about me:")));
+    add_637534923(tmp_1358954501, tmp_1358954519);
+    var tmp_1358954521 = tree_637534986(37, []);
+    tmp_1358954521.class = "simple";
+    var tmp_1358954522 = tree_637534986(38, []);
+    add_637534923(tmp_1358954522, text_637535038(makeNimstrLit("\xF0\x9F\x94\xAD I\xE2\x80\x99m currently working on my ")));
+    var tmp_1358954523 = tree_637534986(47, []);
+    add_637534923(tmp_1358954523, text_637535038(makeNimstrLit("A personal portfolio, a blog, a mulitiplayer game called tichu, and an app\x0Acalled Write and Tell (many more).")));
+    add_637534923(tmp_1358954522, tmp_1358954523);
+    add_637534923(tmp_1358954521, tmp_1358954522);
+    var tmp_1358954524 = tree_637534986(38, []);
+    add_637534923(tmp_1358954524, text_637535038(makeNimstrLit("\xF0\x9F\x8C\xB1 I\xE2\x80\x99m currently learning ")));
+    var tmp_1358954525 = tree_637534986(45, []);
+    tmp_1358954525.class = "reference external";
+    setAttr_637534849(tmp_1358954525, "href", "https://temporal.io/");
+    add_637534923(tmp_1358954525, text_637535038(makeNimstrLit("Temporal")));
+    add_637534923(tmp_1358954524, tmp_1358954525);
+    add_637534923(tmp_1358954524, text_637535038(makeNimstrLit(" , Go, and Unity for XR.")));
+    add_637534923(tmp_1358954521, tmp_1358954524);
+    var tmp_1358954526 = tree_637534986(38, []);
+    add_637534923(tmp_1358954526, text_637535038(makeNimstrLit("\xF0\x9F\x91\xAF I\xE2\x80\x99m looking to collaborate on ")));
+    var tmp_1358954527 = tree_637534986(47, []);
+    add_637534923(tmp_1358954527, text_637535038(makeNimstrLit("OpenSource Projects")));
+    add_637534923(tmp_1358954526, tmp_1358954527);
+    add_637534923(tmp_1358954526, text_637535038(makeNimstrLit(", specifically those that are ")));
+    var tmp_1358954528 = tree_637534986(47, []);
+    add_637534923(tmp_1358954528, text_637535038(makeNimstrLit("futurist, philosophical, or political.")));
+    add_637534923(tmp_1358954526, tmp_1358954528);
+    add_637534923(tmp_1358954521, tmp_1358954526);
+    var tmp_1358954529 = tree_637534986(38, []);
+    add_637534923(tmp_1358954529, text_637535038(makeNimstrLit("\xF0\x9F\x93\xAB You can reach me by ")));
+    var tmp_1358954530 = tree_637534986(45, []);
+    tmp_1358954530.class = "reference external";
+    setAttr_637534849(tmp_1358954530, "href", "");
+    add_637534923(tmp_1358954530, text_637535038(makeNimstrLit("email")));
+    add_637534923(tmp_1358954529, tmp_1358954530);
+    add_637534923(tmp_1358954529, text_637535038(makeNimstrLit(".")));
+    add_637534923(tmp_1358954521, tmp_1358954529);
+    var tmp_1358954531 = tree_637534986(38, []);
+    var tmp_1358954532 = tree_637534986(39, []);
+    tmp_1358954532.class = "docutils";
+    var tmp_1358954533 = tree_637534986(40, []);
+    add_637534923(tmp_1358954533, text_637535038(makeNimstrLit("\xE2\x9A\xA1 About Me :")));
+    add_637534923(tmp_1358954532, tmp_1358954533);
+    var tmp_1358954534 = tree_637534986(41, []);
+    var tmp_1358954535 = tree_637534986(37, []);
+    tmp_1358954535.class = "simple";
+    var tmp_1358954536 = tree_637534986(38, []);
+    add_637534923(tmp_1358954536, text_637535038(makeNimstrLit("Super observer. \xF0\x9F\x91\x80")));
+    add_637534923(tmp_1358954535, tmp_1358954536);
+    var tmp_1358954537 = tree_637534986(38, []);
+    add_637534923(tmp_1358954537, text_637535038(makeNimstrLit("Super Fast Learner. \xF0\x9F\x8E\x93")));
+    add_637534923(tmp_1358954535, tmp_1358954537);
+    var tmp_1358954538 = tree_637534986(38, []);
+    add_637534923(tmp_1358954538, text_637535038(makeNimstrLit("Wanna-be Piano-forte maestro. \xF0\x9F\x8E\xB9")));
+    add_637534923(tmp_1358954535, tmp_1358954538);
+    var tmp_1358954539 = tree_637534986(38, []);
+    add_637534923(tmp_1358954539, text_637535038(makeNimstrLit("I am trying to improve my art skills with ")));
+    var tmp_1358954540 = tree_637534986(45, []);
+    tmp_1358954540.class = "reference external";
+    setAttr_637534849(tmp_1358954540, "href", "http://www.drawabox.com");
+    add_637534923(tmp_1358954540, text_637535038(makeNimstrLit("drawabox")));
+    add_637534923(tmp_1358954539, tmp_1358954540);
+    add_637534923(tmp_1358954539, text_637535038(makeNimstrLit(". \xF0\x9F\x8E\xAD")));
+    add_637534923(tmp_1358954535, tmp_1358954539);
+    var tmp_1358954541 = tree_637534986(38, []);
+    add_637534923(tmp_1358954541, text_637535038(makeNimstrLit("I love cats, I\'ve got a golden ragtail and two twins. \xF0\x9F\x90\xB1")));
+    add_637534923(tmp_1358954535, tmp_1358954541);
+    var tmp_1358954542 = tree_637534986(38, []);
+    add_637534923(tmp_1358954542, text_637535038(makeNimstrLit("I am primarily interested in Philosophical and Futurist discussions. Helps me\x0Acope with anxiety. \xF0\x9F\x98\x85")));
+    add_637534923(tmp_1358954535, tmp_1358954542);
+    var tmp_1358954543 = tree_637534986(38, []);
+    add_637534923(tmp_1358954543, text_637535038(makeNimstrLit("Reading every available webnovel on ")));
+    var tmp_1358954544 = tree_637534986(45, []);
+    tmp_1358954544.class = "reference external";
+    setAttr_637534849(tmp_1358954544, "href", "https://www.royalroad.com");
+    add_637534923(tmp_1358954544, text_637535038(makeNimstrLit("royalroad")));
+    add_637534923(tmp_1358954543, tmp_1358954544);
+    add_637534923(tmp_1358954543, text_637535038(makeNimstrLit(" . \xF0\x9F\x98\x89")));
+    add_637534923(tmp_1358954535, tmp_1358954543);
+    var tmp_1358954545 = tree_637534986(38, []);
+    add_637534923(tmp_1358954545, text_637535038(makeNimstrLit("I am a huge fan of ")));
+    var tmp_1358954546 = tree_637534986(45, []);
+    tmp_1358954546.class = "reference external";
+    setAttr_637534849(tmp_1358954546, "href", "https://www.goodreads.com/book/show/29579.Foundation");
+    add_637534923(tmp_1358954546, text_637535038(makeNimstrLit("Foundation")));
+    add_637534923(tmp_1358954545, tmp_1358954546);
+    add_637534923(tmp_1358954545, text_637535038(makeNimstrLit(" . \xF0\x9F\x9A\x80")));
+    add_637534923(tmp_1358954535, tmp_1358954545);
+    add_637534923(tmp_1358954534, tmp_1358954535);
+    add_637534923(tmp_1358954532, tmp_1358954534);
+    add_637534923(tmp_1358954531, tmp_1358954532);
+    add_637534923(tmp_1358954521, tmp_1358954531);
+    add_637534923(tmp_1358954501, tmp_1358954521);
+    var tmp_1358954547 = tree_637534986(44, []);
+    tmp_1358954547.class = "row";
+    var tmp_1358954548 = tree_637534986(44, []);
+    tmp_1358954548.class = "twelve-columns footer";
+    var tmp_1358954549 = tree_637534986(71, []);
+    tmp_1358954549.class = "nim-sprite";
+    add_637534923(tmp_1358954548, tmp_1358954549);
+    var tmp_1358954550 = tree_637534986(72, []);
+    add_637534923(tmp_1358954548, tmp_1358954550);
+    var tmp_1358954551 = tree_637534986(48, []);
+    add_637534923(tmp_1358954551, text_637535038(makeNimstrLit("Made with Nim. Generated: 2023-02-21 20:46:57 UTC")));
+    add_637534923(tmp_1358954548, tmp_1358954551);
+    add_637534923(tmp_1358954547, tmp_1358954548);
+    add_637534923(tmp_1358954501, tmp_1358954547);
+    result_1358954500 = tmp_1358954501;
+
+  return result_1358954500;
+
+}
+
+function contact_1375731726() {
+  var result_1375731727 = null;
+
+    var tmp_1375731728 = tree_637534986(44, []);
+    tmp_1375731728.class = "container";
+    var tmp_1375731729 = tree_637534986(190, []);
+    setAttr_637534849(tmp_1375731729, "method", "POST");
+    setAttr_637534849(tmp_1375731729, "action", "/contact");
+    var tmp_1375731730 = tree_637534986(44, []);
+    var tmp_1375731731 = tree_637534986(44, []);
+    var tmp_1375731732 = tree_637534986(193, []);
+    setAttr_637534849(tmp_1375731732, "for", "firstname");
+    add_637534923(tmp_1375731731, tmp_1375731732);
+    add_637534923(tmp_1375731731, text_637535038(makeNimstrLit("First Name")));
+    add_637534923(tmp_1375731730, tmp_1375731731);
+    var tmp_1375731733 = tree_637534986(44, []);
+    var tmp_1375731734 = tree_637534986(194, []);
+    setAttr_637534849(tmp_1375731734, "type", "text");
+    tmp_1375731734.id = "fname";
+    setAttr_637534849(tmp_1375731734, "name", "firstname");
+    setAttr_637534849(tmp_1375731734, "placeholder", "Your name..");
+    add_637534923(tmp_1375731733, tmp_1375731734);
+    add_637534923(tmp_1375731730, tmp_1375731733);
+    add_637534923(tmp_1375731729, tmp_1375731730);
+    var tmp_1375731735 = tree_637534986(44, []);
+    var tmp_1375731736 = tree_637534986(44, []);
+    var tmp_1375731737 = tree_637534986(193, []);
+    setAttr_637534849(tmp_1375731737, "for", "lastname");
+    add_637534923(tmp_1375731737, text_637535038(makeNimstrLit("Last Name")));
+    add_637534923(tmp_1375731736, tmp_1375731737);
+    add_637534923(tmp_1375731735, tmp_1375731736);
+    var tmp_1375731738 = tree_637534986(44, []);
+    var tmp_1375731739 = tree_637534986(194, []);
+    setAttr_637534849(tmp_1375731739, "type", "text");
+    tmp_1375731739.id = "lname";
+    setAttr_637534849(tmp_1375731739, "name", "lastname");
+    setAttr_637534849(tmp_1375731739, "placeholder", "Your last name..");
+    add_637534923(tmp_1375731738, tmp_1375731739);
+    add_637534923(tmp_1375731735, tmp_1375731738);
+    add_637534923(tmp_1375731729, tmp_1375731735);
+    var tmp_1375731740 = tree_637534986(44, []);
+    var tmp_1375731741 = tree_637534986(44, []);
+    var tmp_1375731742 = tree_637534986(193, []);
+    setAttr_637534849(tmp_1375731742, "for", "country");
+    add_637534923(tmp_1375731742, text_637535038(makeNimstrLit("Country")));
+    add_637534923(tmp_1375731741, tmp_1375731742);
+    add_637534923(tmp_1375731740, tmp_1375731741);
+    var tmp_1375731743 = tree_637534986(44, []);
+    var tmp_1375731744 = tree_637534986(196, []);
+    tmp_1375731744.id = "country";
+    setAttr_637534849(tmp_1375731744, "name", "country");
+    Label1: do {
+      var country_1375731783 = [];
+      var i_469762172 = 0;
+      var L_469762173 = 196;
+      Label2: do {
+          Label3: while (true) {
+          if (!(i_469762172 < L_469762173)) break Label3;
+            country_1375731783 = Countries_1375731725[chckIndx(i_469762172, 0, (Countries_1375731725).length - 1)];
+            var tmp_1375731745 = tree_637534986(199, []);
+            valueHEX3D_637534627(tmp_1375731745, toJSStr(country_1375731783));
+            setAttr_637534849(tmp_1375731745, "value", toJSStr(country_1375731783));
+            add_637534923(tmp_1375731745, text_637535038(country_1375731783));
+            add_637534923(tmp_1375731744, tmp_1375731745);
+            i_469762172 = addInt(i_469762172, 1);
+            if (!((196 == L_469762173))) {
+            failedAssertImpl_218103864(makeNimstrLit("iterators.nim(240, 11) `len(a) == L` the length of the seq changed while iterating over it"));
+            }
+            
+          }
+      } while (false);
+    } while (false);
+    add_637534923(tmp_1375731743, tmp_1375731744);
+    add_637534923(tmp_1375731740, tmp_1375731743);
+    add_637534923(tmp_1375731729, tmp_1375731740);
+    var tmp_1375731746 = tree_637534986(44, []);
+    var tmp_1375731747 = tree_637534986(44, []);
+    var tmp_1375731748 = tree_637534986(193, []);
+    setAttr_637534849(tmp_1375731748, "for", "email");
+    add_637534923(tmp_1375731748, text_637535038(makeNimstrLit("Email")));
+    add_637534923(tmp_1375731747, tmp_1375731748);
+    add_637534923(tmp_1375731746, tmp_1375731747);
+    var tmp_1375731749 = tree_637534986(44, []);
+    var tmp_1375731750 = tree_637534986(194, []);
+    setAttr_637534849(tmp_1375731750, "type", "email");
+    tmp_1375731750.id = "email";
+    setAttr_637534849(tmp_1375731750, "name", "email");
+    setAttr_637534849(tmp_1375731750, "placeholder", "Your email..");
+    add_637534923(tmp_1375731749, tmp_1375731750);
+    add_637534923(tmp_1375731746, tmp_1375731749);
+    add_637534923(tmp_1375731729, tmp_1375731746);
+    var tmp_1375731751 = tree_637534986(44, []);
+    var tmp_1375731752 = tree_637534986(44, []);
+    var tmp_1375731753 = tree_637534986(193, []);
+    setAttr_637534849(tmp_1375731753, "for", "company");
+    add_637534923(tmp_1375731753, text_637535038(makeNimstrLit("Company")));
+    add_637534923(tmp_1375731752, tmp_1375731753);
+    add_637534923(tmp_1375731751, tmp_1375731752);
+    var tmp_1375731754 = tree_637534986(44, []);
+    var tmp_1375731755 = tree_637534986(194, []);
+    setAttr_637534849(tmp_1375731755, "type", "text");
+    tmp_1375731755.id = "company";
+    setAttr_637534849(tmp_1375731755, "name", "company");
+    setAttr_637534849(tmp_1375731755, "placeholder", "Your company..");
+    add_637534923(tmp_1375731754, tmp_1375731755);
+    add_637534923(tmp_1375731751, tmp_1375731754);
+    add_637534923(tmp_1375731729, tmp_1375731751);
+    var tmp_1375731756 = tree_637534986(44, []);
+    var tmp_1375731757 = tree_637534986(44, []);
+    var tmp_1375731758 = tree_637534986(193, []);
+    setAttr_637534849(tmp_1375731758, "for", "subject");
+    add_637534923(tmp_1375731758, text_637535038(makeNimstrLit("Subject")));
+    add_637534923(tmp_1375731757, tmp_1375731758);
+    add_637534923(tmp_1375731756, tmp_1375731757);
+    var tmp_1375731759 = tree_637534986(44, []);
+    var tmp_1375731760 = tree_637534986(200, []);
+    tmp_1375731760.id = "subject";
+    setAttr_637534849(tmp_1375731760, "name", "subject");
+    setAttr_637534849(tmp_1375731760, "placeholder", "Write something..");
+    add_637534923(tmp_1375731759, tmp_1375731760);
+    add_637534923(tmp_1375731756, tmp_1375731759);
+    add_637534923(tmp_1375731729, tmp_1375731756);
+    var tmp_1375731761 = tree_637534986(44, []);
+    var tmp_1375731762 = tree_637534986(195, []);
+    setAttr_637534849(tmp_1375731762, "type", "submit");
+    add_637534923(tmp_1375731762, text_637535038(makeNimstrLit("Submit")));
+    add_637534923(tmp_1375731761, tmp_1375731762);
+    add_637534923(tmp_1375731729, tmp_1375731761);
+    add_637534923(tmp_1375731728, tmp_1375731729);
+    result_1375731727 = tmp_1375731728;
+
+  return result_1375731727;
+
+}
+
+function projects_1409286147() {
   var result_1409286148 = null;
 
     var tmp_1409286149 = tree_637534986(44, []);
     tmp_1409286149.class = "container";
-    var tmp_1409286150 = tree_637534986(21, []);
-    tmp_1409286150.id = "about-me";
-    add_637534923(tmp_1409286150, text_637535038(makeNimstrLit("About Me")));
+    var tmp_1409286150 = tree_637534986(32, []);
+    add_637534923(tmp_1409286150, text_637535038(makeNimstrLit("I am the projects now")));
     add_637534923(tmp_1409286149, tmp_1409286150);
-    var tmp_1409286151 = tree_637534986(22, []);
-    tmp_1409286151.id = "poetic-introductioncolon";
-    add_637534923(tmp_1409286151, text_637535038(makeNimstrLit("Poetic Introduction:")));
-    add_637534923(tmp_1409286149, tmp_1409286151);
-    var tmp_1409286152 = tree_637534986(35, []);
-    var tmp_1409286153 = tree_637534986(32, []);
-    add_637534923(tmp_1409286152, tmp_1409286153);
-    var tmp_1409286154 = tree_637534986(32, []);
-    add_637534923(tmp_1409286154, text_637535038(makeNimstrLit("I am but a maker in a small Canadian town, Crafting software with rapid-fire,\x0Atrying to hold it down. I am post-anarchist adjacent, or so they say, Though\x0Awhat that means, I cannot truly say.")));
-    add_637534923(tmp_1409286152, tmp_1409286154);
-    var tmp_1409286155 = tree_637534986(32, []);
-    add_637534923(tmp_1409286155, text_637535038(makeNimstrLit("Each day I strive to learn, to keep my skills on the rise, Temporal, Go, and\x0AUnity, I never compromise. Yet humble must I be, for my journey\'s just begun, As\x0Athe horizon of knowledge is wider than the sun.")));
-    add_637534923(tmp_1409286152, tmp_1409286155);
-    var tmp_1409286156 = tree_637534986(32, []);
-    add_637534923(tmp_1409286156, text_637535038(makeNimstrLit("Feline friends I cherish, three in number are they, Ever by my side, as I toil\x0Aand work and play. And when I need respite, from the toil and grind, I dive into\x0Aa litRPGs, or Asimov, to ease my mind.")));
-    add_637534923(tmp_1409286152, tmp_1409286156);
-    var tmp_1409286157 = tree_637534986(32, []);
-    add_637534923(tmp_1409286157, text_637535038(makeNimstrLit("Portfolios, blogs, and multiplayer games, I have many irons in the fire, And I\'m\x0Amaking an app called Write and Tell, my greatest desire. But fame and fortune do\x0Anot move me, nor drive me to excel, For true satisfaction comes from the\x0Adifference we make, and the stories we tell.")));
-    add_637534923(tmp_1409286152, tmp_1409286157);
-    var tmp_1409286158 = tree_637534986(32, []);
-    add_637534923(tmp_1409286158, text_637535038(makeNimstrLit("So raise a glass(of tea), to this humble(the humble never say they are) maker on\x0Athy journey to the stars, With a heart full of hope, and a mind full of scars.\x0AMay I make a difference, and play my part aright, For in the end, it\'s not about\x0Ame, it\'s about making things right.")));
-    add_637534923(tmp_1409286152, tmp_1409286158);
-    add_637534923(tmp_1409286149, tmp_1409286152);
-    var tmp_1409286159 = tree_637534986(22, []);
-    tmp_1409286159.id = "introduction";
-    add_637534923(tmp_1409286159, text_637535038(makeNimstrLit("Introduction")));
-    add_637534923(tmp_1409286149, tmp_1409286159);
-    var tmp_1409286160 = tree_637534986(39, []);
-    tmp_1409286160.class = "docutils";
-    var tmp_1409286161 = tree_637534986(40, []);
-    add_637534923(tmp_1409286161, text_637535038(makeNimstrLit("Introductions are ")));
-    var tmp_1409286162 = tree_637534986(46, []);
-    add_637534923(tmp_1409286162, text_637535038(makeNimstrLit("hard")));
-    add_637534923(tmp_1409286161, tmp_1409286162);
-    add_637534923(tmp_1409286161, text_637535038(makeNimstrLit(". Here is a short one:")));
-    add_637534923(tmp_1409286160, tmp_1409286161);
-    var tmp_1409286163 = tree_637534986(41, []);
-    var tmp_1409286164 = tree_637534986(32, []);
-    add_637534923(tmp_1409286164, text_637535038(makeNimstrLit("I am dio, a PoC software maker and enby (planning to write a whole thing about\x0Athat soon that no one will read) based in a small Canadian town. I love all\x0Athings tech, from contributing to FOSS projects to exploring the world of data\x0Ascience.")));
-    add_637534923(tmp_1409286163, tmp_1409286164);
-    var tmp_1409286165 = tree_637534986(32, []);
-    add_637534923(tmp_1409286165, text_637535038(makeNimstrLit("I also love posting about any philosophy papers. I am post-anarchist adjacent\x0Apolitically \xF0\x9F\x8F\xB4. If you know what that means (because I don\'t), that\'s awesome.")));
-    add_637534923(tmp_1409286163, tmp_1409286165);
-    var tmp_1409286166 = tree_637534986(32, []);
-    add_637534923(tmp_1409286166, text_637535038(makeNimstrLit("When I\'m not coding, you can usually find me lost in virtual reality, tinkering\x0Awith Unity or experimenting with 3D printing. I am sure you and the dozens of\x0Aother similarly politically inclined would be happy for me to tag along in one\x0Aof your reading groups. So if you\'re looking for someone to geek out with about\x0Atech or philosophy, feel free to reach out!")));
-    add_637534923(tmp_1409286163, tmp_1409286166);
-    add_637534923(tmp_1409286160, tmp_1409286163);
-    add_637534923(tmp_1409286149, tmp_1409286160);
-    var tmp_1409286167 = tree_637534986(32, []);
-    add_637534923(tmp_1409286167, text_637535038(makeNimstrLit("Here are some ")));
-    var tmp_1409286168 = tree_637534986(46, []);
-    add_637534923(tmp_1409286168, text_637535038(makeNimstrLit("Rapid-Fire")));
-    add_637534923(tmp_1409286167, tmp_1409286168);
-    add_637534923(tmp_1409286167, text_637535038(makeNimstrLit(" facts about me:")));
-    add_637534923(tmp_1409286149, tmp_1409286167);
-    var tmp_1409286169 = tree_637534986(37, []);
-    tmp_1409286169.class = "simple";
-    var tmp_1409286170 = tree_637534986(38, []);
-    add_637534923(tmp_1409286170, text_637535038(makeNimstrLit("\xF0\x9F\x94\xAD I\xE2\x80\x99m currently working on my ")));
-    var tmp_1409286171 = tree_637534986(47, []);
-    add_637534923(tmp_1409286171, text_637535038(makeNimstrLit("A personal portfolio, a blog, a mulitiplayer game called tichu, and an app\x0Acalled Write and Tell (many more).")));
-    add_637534923(tmp_1409286170, tmp_1409286171);
-    add_637534923(tmp_1409286169, tmp_1409286170);
-    var tmp_1409286172 = tree_637534986(38, []);
-    add_637534923(tmp_1409286172, text_637535038(makeNimstrLit("\xF0\x9F\x8C\xB1 I\xE2\x80\x99m currently learning ")));
-    var tmp_1409286173 = tree_637534986(45, []);
-    tmp_1409286173.class = "reference external";
-    setAttr_637534849(tmp_1409286173, "href", "https://temporal.io/");
-    add_637534923(tmp_1409286173, text_637535038(makeNimstrLit("Temporal")));
-    add_637534923(tmp_1409286172, tmp_1409286173);
-    add_637534923(tmp_1409286172, text_637535038(makeNimstrLit(" , Go, and Unity for XR.")));
-    add_637534923(tmp_1409286169, tmp_1409286172);
-    var tmp_1409286174 = tree_637534986(38, []);
-    add_637534923(tmp_1409286174, text_637535038(makeNimstrLit("\xF0\x9F\x91\xAF I\xE2\x80\x99m looking to collaborate on ")));
-    var tmp_1409286175 = tree_637534986(47, []);
-    add_637534923(tmp_1409286175, text_637535038(makeNimstrLit("OpenSource Projects")));
-    add_637534923(tmp_1409286174, tmp_1409286175);
-    add_637534923(tmp_1409286174, text_637535038(makeNimstrLit(", specifically those that are ")));
-    var tmp_1409286176 = tree_637534986(47, []);
-    add_637534923(tmp_1409286176, text_637535038(makeNimstrLit("futurist, philosophical, or political.")));
-    add_637534923(tmp_1409286174, tmp_1409286176);
-    add_637534923(tmp_1409286169, tmp_1409286174);
-    var tmp_1409286177 = tree_637534986(38, []);
-    add_637534923(tmp_1409286177, text_637535038(makeNimstrLit("\xF0\x9F\x93\xAB You can reach me by ")));
-    var tmp_1409286178 = tree_637534986(45, []);
-    tmp_1409286178.class = "reference external";
-    setAttr_637534849(tmp_1409286178, "href", "");
-    add_637534923(tmp_1409286178, text_637535038(makeNimstrLit("email")));
-    add_637534923(tmp_1409286177, tmp_1409286178);
-    add_637534923(tmp_1409286177, text_637535038(makeNimstrLit(".")));
-    add_637534923(tmp_1409286169, tmp_1409286177);
-    var tmp_1409286179 = tree_637534986(38, []);
-    var tmp_1409286180 = tree_637534986(39, []);
-    tmp_1409286180.class = "docutils";
-    var tmp_1409286181 = tree_637534986(40, []);
-    add_637534923(tmp_1409286181, text_637535038(makeNimstrLit("\xE2\x9A\xA1 About Me :")));
-    add_637534923(tmp_1409286180, tmp_1409286181);
-    var tmp_1409286182 = tree_637534986(41, []);
-    var tmp_1409286183 = tree_637534986(37, []);
-    tmp_1409286183.class = "simple";
-    var tmp_1409286184 = tree_637534986(38, []);
-    add_637534923(tmp_1409286184, text_637535038(makeNimstrLit("Super observer. \xF0\x9F\x91\x80")));
-    add_637534923(tmp_1409286183, tmp_1409286184);
-    var tmp_1409286185 = tree_637534986(38, []);
-    add_637534923(tmp_1409286185, text_637535038(makeNimstrLit("Super Fast Learner. \xF0\x9F\x8E\x93")));
-    add_637534923(tmp_1409286183, tmp_1409286185);
-    var tmp_1409286186 = tree_637534986(38, []);
-    add_637534923(tmp_1409286186, text_637535038(makeNimstrLit("Wanna-be Piano-forte maestro. \xF0\x9F\x8E\xB9")));
-    add_637534923(tmp_1409286183, tmp_1409286186);
-    var tmp_1409286187 = tree_637534986(38, []);
-    add_637534923(tmp_1409286187, text_637535038(makeNimstrLit("I am trying to improve my art skills with ")));
-    var tmp_1409286188 = tree_637534986(45, []);
-    tmp_1409286188.class = "reference external";
-    setAttr_637534849(tmp_1409286188, "href", "http://www.drawabox.com");
-    add_637534923(tmp_1409286188, text_637535038(makeNimstrLit("drawabox")));
-    add_637534923(tmp_1409286187, tmp_1409286188);
-    add_637534923(tmp_1409286187, text_637535038(makeNimstrLit(". \xF0\x9F\x8E\xAD")));
-    add_637534923(tmp_1409286183, tmp_1409286187);
-    var tmp_1409286189 = tree_637534986(38, []);
-    add_637534923(tmp_1409286189, text_637535038(makeNimstrLit("I love cats, I\'ve got a golden ragtail and two twins. \xF0\x9F\x90\xB1")));
-    add_637534923(tmp_1409286183, tmp_1409286189);
-    var tmp_1409286190 = tree_637534986(38, []);
-    add_637534923(tmp_1409286190, text_637535038(makeNimstrLit("I am primarily interested in Philosophical and Futurist discussions. Helps me\x0Acope with anxiety. \xF0\x9F\x98\x85")));
-    add_637534923(tmp_1409286183, tmp_1409286190);
-    var tmp_1409286191 = tree_637534986(38, []);
-    add_637534923(tmp_1409286191, text_637535038(makeNimstrLit("Reading every available webnovel on ")));
-    var tmp_1409286192 = tree_637534986(45, []);
-    tmp_1409286192.class = "reference external";
-    setAttr_637534849(tmp_1409286192, "href", "https://www.royalroad.com");
-    add_637534923(tmp_1409286192, text_637535038(makeNimstrLit("royalroad")));
-    add_637534923(tmp_1409286191, tmp_1409286192);
-    add_637534923(tmp_1409286191, text_637535038(makeNimstrLit(" . \xF0\x9F\x98\x89")));
-    add_637534923(tmp_1409286183, tmp_1409286191);
-    var tmp_1409286193 = tree_637534986(38, []);
-    add_637534923(tmp_1409286193, text_637535038(makeNimstrLit("I am a huge fan of ")));
-    var tmp_1409286194 = tree_637534986(45, []);
-    tmp_1409286194.class = "reference external";
-    setAttr_637534849(tmp_1409286194, "href", "https://www.goodreads.com/book/show/29579.Foundation");
-    add_637534923(tmp_1409286194, text_637535038(makeNimstrLit("Foundation")));
-    add_637534923(tmp_1409286193, tmp_1409286194);
-    add_637534923(tmp_1409286193, text_637535038(makeNimstrLit(" . \xF0\x9F\x9A\x80")));
-    add_637534923(tmp_1409286183, tmp_1409286193);
-    add_637534923(tmp_1409286182, tmp_1409286183);
-    add_637534923(tmp_1409286180, tmp_1409286182);
-    add_637534923(tmp_1409286179, tmp_1409286180);
-    add_637534923(tmp_1409286169, tmp_1409286179);
-    add_637534923(tmp_1409286149, tmp_1409286169);
-    var tmp_1409286195 = tree_637534986(44, []);
-    tmp_1409286195.class = "row";
-    var tmp_1409286196 = tree_637534986(44, []);
-    tmp_1409286196.class = "twelve-columns footer";
-    var tmp_1409286197 = tree_637534986(71, []);
-    tmp_1409286197.class = "nim-sprite";
-    add_637534923(tmp_1409286196, tmp_1409286197);
-    var tmp_1409286198 = tree_637534986(72, []);
-    add_637534923(tmp_1409286196, tmp_1409286198);
-    var tmp_1409286199 = tree_637534986(48, []);
-    add_637534923(tmp_1409286199, text_637535038(makeNimstrLit("Made with Nim. Generated: 2023-02-21 20:46:57 UTC")));
-    add_637534923(tmp_1409286196, tmp_1409286199);
-    add_637534923(tmp_1409286195, tmp_1409286196);
-    add_637534923(tmp_1409286149, tmp_1409286195);
     result_1409286148 = tmp_1409286149;
 
   return result_1409286148;
 
 }
 
-function contact_1426063374() {
-  var result_1426063375 = null;
+function hostStats_1426063369(host_1426063370) {
+  var result_1426063371 = null;
 
-    var tmp_1426063376 = tree_637534986(44, []);
-    tmp_1426063376.class = "container";
-    var tmp_1426063377 = tree_637534986(190, []);
-    setAttr_637534849(tmp_1426063377, "method", "POST");
-    setAttr_637534849(tmp_1426063377, "action", "/contact");
-    var tmp_1426063378 = tree_637534986(44, []);
-    var tmp_1426063379 = tree_637534986(44, []);
-    var tmp_1426063380 = tree_637534986(193, []);
-    setAttr_637534849(tmp_1426063380, "for", "firstname");
+    var tmp_1426063372 = tree_637534986(44, []);
+    var tmp_1426063373 = tree_637534986(187, []);
+    var tmp_1426063374 = tree_637534986(189, []);
+    add_637534923(tmp_1426063374, text_637535038(strConv_1442840577([nimCopy(null, host_1426063370.name, NTI33554439), makeNimstrLit("\xE2\x9B\xA9\xEF\xB8\x8F")])));
+    add_637534923(tmp_1426063373, tmp_1426063374);
+    add_637534923(tmp_1426063372, tmp_1426063373);
+    var tmp_1426063375 = tree_637534986(187, []);
+    var tmp_1426063376 = tree_637534986(189, []);
+    add_637534923(tmp_1426063376, text_637535038(makeNimstrLit("Repos \xF0\x9F\x93\x9A")));
+    add_637534923(tmp_1426063375, tmp_1426063376);
+    var tmp_1426063377 = tree_637534986(189, []);
+    add_637534923(tmp_1426063377, text_637535038(makeNimstrLit("Stars \xF0\x9F\x8C\x9F")));
+    add_637534923(tmp_1426063375, tmp_1426063377);
+    var tmp_1426063378 = tree_637534986(189, []);
+    add_637534923(tmp_1426063378, text_637535038(makeNimstrLit("Commits \xF0\x9F\x96\x8A\xEF\xB8\x8F")));
+    add_637534923(tmp_1426063375, tmp_1426063378);
+    add_637534923(tmp_1426063372, tmp_1426063375);
+    var tmp_1426063379 = tree_637534986(187, []);
+    var tmp_1426063380 = tree_637534986(188, []);
+    add_637534923(tmp_1426063380, text_637535038(strConv_1442840577(host_1426063370.repos)));
     add_637534923(tmp_1426063379, tmp_1426063380);
-    add_637534923(tmp_1426063379, text_637535038(makeNimstrLit("First Name")));
-    add_637534923(tmp_1426063378, tmp_1426063379);
-    var tmp_1426063381 = tree_637534986(44, []);
-    var tmp_1426063382 = tree_637534986(194, []);
-    setAttr_637534849(tmp_1426063382, "type", "text");
-    tmp_1426063382.id = "fname";
-    setAttr_637534849(tmp_1426063382, "name", "firstname");
-    setAttr_637534849(tmp_1426063382, "placeholder", "Your name..");
-    add_637534923(tmp_1426063381, tmp_1426063382);
-    add_637534923(tmp_1426063378, tmp_1426063381);
-    add_637534923(tmp_1426063377, tmp_1426063378);
-    var tmp_1426063383 = tree_637534986(44, []);
-    var tmp_1426063384 = tree_637534986(44, []);
-    var tmp_1426063385 = tree_637534986(193, []);
-    setAttr_637534849(tmp_1426063385, "for", "lastname");
-    add_637534923(tmp_1426063385, text_637535038(makeNimstrLit("Last Name")));
-    add_637534923(tmp_1426063384, tmp_1426063385);
-    add_637534923(tmp_1426063383, tmp_1426063384);
-    var tmp_1426063386 = tree_637534986(44, []);
-    var tmp_1426063387 = tree_637534986(194, []);
-    setAttr_637534849(tmp_1426063387, "type", "text");
-    tmp_1426063387.id = "lname";
-    setAttr_637534849(tmp_1426063387, "name", "lastname");
-    setAttr_637534849(tmp_1426063387, "placeholder", "Your last name..");
-    add_637534923(tmp_1426063386, tmp_1426063387);
-    add_637534923(tmp_1426063383, tmp_1426063386);
-    add_637534923(tmp_1426063377, tmp_1426063383);
-    var tmp_1426063388 = tree_637534986(44, []);
-    var tmp_1426063389 = tree_637534986(44, []);
-    var tmp_1426063390 = tree_637534986(193, []);
-    setAttr_637534849(tmp_1426063390, "for", "country");
-    add_637534923(tmp_1426063390, text_637535038(makeNimstrLit("Country")));
-    add_637534923(tmp_1426063389, tmp_1426063390);
-    add_637534923(tmp_1426063388, tmp_1426063389);
-    var tmp_1426063391 = tree_637534986(44, []);
-    var tmp_1426063392 = tree_637534986(196, []);
-    tmp_1426063392.id = "country";
-    setAttr_637534849(tmp_1426063392, "name", "country");
-    Label1: do {
-      var country_1426063431 = [];
-      var i_469762176 = 0;
-      var L_469762177 = 196;
-      Label2: do {
-          Label3: while (true) {
-          if (!(i_469762176 < L_469762177)) break Label3;
-            country_1426063431 = Countries_1426063373[chckIndx(i_469762176, 0, (Countries_1426063373).length - 1)];
-            var tmp_1426063393 = tree_637534986(199, []);
-            valueHEX3D_637534627(tmp_1426063393, toJSStr(country_1426063431));
-            setAttr_637534849(tmp_1426063393, "value", toJSStr(country_1426063431));
-            add_637534923(tmp_1426063393, text_637535038(country_1426063431));
-            add_637534923(tmp_1426063392, tmp_1426063393);
-            i_469762176 = addInt(i_469762176, 1);
-            if (!((196 == L_469762177))) {
-            failedAssertImpl_218103864(makeNimstrLit("iterators.nim(240, 11) `len(a) == L` the length of the seq changed while iterating over it"));
-            }
-            
-          }
-      } while (false);
-    } while (false);
-    add_637534923(tmp_1426063391, tmp_1426063392);
-    add_637534923(tmp_1426063388, tmp_1426063391);
-    add_637534923(tmp_1426063377, tmp_1426063388);
-    var tmp_1426063394 = tree_637534986(44, []);
+    var tmp_1426063381 = tree_637534986(188, []);
+    add_637534923(tmp_1426063381, text_637535038(HEX24_335544323(host_1426063370.stars)));
+    add_637534923(tmp_1426063379, tmp_1426063381);
+    var tmp_1426063382 = tree_637534986(188, []);
+    add_637534923(tmp_1426063382, text_637535038(HEX24_335544323(host_1426063370.commits)));
+    add_637534923(tmp_1426063379, tmp_1426063382);
+    add_637534923(tmp_1426063372, tmp_1426063379);
+    result_1426063371 = tmp_1426063372;
+
+  return result_1426063371;
+
+}
+
+function stats_1426063392(hosts_1426063393) {
+  var result_1426063394 = null;
+
     var tmp_1426063395 = tree_637534986(44, []);
-    var tmp_1426063396 = tree_637534986(193, []);
-    setAttr_637534849(tmp_1426063396, "for", "email");
-    add_637534923(tmp_1426063396, text_637535038(makeNimstrLit("Email")));
-    add_637534923(tmp_1426063395, tmp_1426063396);
-    add_637534923(tmp_1426063394, tmp_1426063395);
-    var tmp_1426063397 = tree_637534986(44, []);
-    var tmp_1426063398 = tree_637534986(194, []);
-    setAttr_637534849(tmp_1426063398, "type", "email");
-    tmp_1426063398.id = "email";
-    setAttr_637534849(tmp_1426063398, "name", "email");
-    setAttr_637534849(tmp_1426063398, "placeholder", "Your email..");
-    add_637534923(tmp_1426063397, tmp_1426063398);
-    add_637534923(tmp_1426063394, tmp_1426063397);
-    add_637534923(tmp_1426063377, tmp_1426063394);
-    var tmp_1426063399 = tree_637534986(44, []);
-    var tmp_1426063400 = tree_637534986(44, []);
-    var tmp_1426063401 = tree_637534986(193, []);
-    setAttr_637534849(tmp_1426063401, "for", "company");
-    add_637534923(tmp_1426063401, text_637535038(makeNimstrLit("Company")));
-    add_637534923(tmp_1426063400, tmp_1426063401);
-    add_637534923(tmp_1426063399, tmp_1426063400);
-    var tmp_1426063402 = tree_637534986(44, []);
-    var tmp_1426063403 = tree_637534986(194, []);
-    setAttr_637534849(tmp_1426063403, "type", "text");
-    tmp_1426063403.id = "company";
-    setAttr_637534849(tmp_1426063403, "name", "company");
-    setAttr_637534849(tmp_1426063403, "placeholder", "Your company..");
-    add_637534923(tmp_1426063402, tmp_1426063403);
-    add_637534923(tmp_1426063399, tmp_1426063402);
-    add_637534923(tmp_1426063377, tmp_1426063399);
-    var tmp_1426063404 = tree_637534986(44, []);
-    var tmp_1426063405 = tree_637534986(44, []);
-    var tmp_1426063406 = tree_637534986(193, []);
-    setAttr_637534849(tmp_1426063406, "for", "subject");
-    add_637534923(tmp_1426063406, text_637535038(makeNimstrLit("Subject")));
-    add_637534923(tmp_1426063405, tmp_1426063406);
-    add_637534923(tmp_1426063404, tmp_1426063405);
-    var tmp_1426063407 = tree_637534986(44, []);
-    var tmp_1426063408 = tree_637534986(200, []);
-    tmp_1426063408.id = "subject";
-    setAttr_637534849(tmp_1426063408, "name", "subject");
-    setAttr_637534849(tmp_1426063408, "placeholder", "Write something..");
-    add_637534923(tmp_1426063407, tmp_1426063408);
-    add_637534923(tmp_1426063404, tmp_1426063407);
-    add_637534923(tmp_1426063377, tmp_1426063404);
-    var tmp_1426063409 = tree_637534986(44, []);
-    var tmp_1426063410 = tree_637534986(195, []);
-    setAttr_637534849(tmp_1426063410, "type", "submit");
-    add_637534923(tmp_1426063410, text_637535038(makeNimstrLit("Submit")));
-    add_637534923(tmp_1426063409, tmp_1426063410);
-    add_637534923(tmp_1426063377, tmp_1426063409);
-    add_637534923(tmp_1426063376, tmp_1426063377);
-    result_1426063375 = tmp_1426063376;
-
-  return result_1426063375;
-
-}
-
-function projects_1459617795() {
-  var result_1459617796 = null;
-
-    var tmp_1459617797 = tree_637534986(44, []);
-    tmp_1459617797.class = "container";
-    var tmp_1459617798 = tree_637534986(32, []);
-    add_637534923(tmp_1459617798, text_637535038(makeNimstrLit("I am the projects now")));
-    add_637534923(tmp_1459617797, tmp_1459617798);
-    result_1459617796 = tmp_1459617797;
-
-  return result_1459617796;
-
-}
-
-function hostStats_1476395017(host_1476395018) {
-  var result_1476395019 = null;
-
-    var tmp_1476395020 = tree_637534986(44, []);
-    var tmp_1476395021 = tree_637534986(187, []);
-    var tmp_1476395022 = tree_637534986(189, []);
-    add_637534923(tmp_1476395022, text_637535038(strConv_1493172225([nimCopy(null, host_1476395018.name, NTI33554439), makeNimstrLit("\xE2\x9B\xA9\xEF\xB8\x8F")])));
-    add_637534923(tmp_1476395021, tmp_1476395022);
-    add_637534923(tmp_1476395020, tmp_1476395021);
-    var tmp_1476395023 = tree_637534986(187, []);
-    var tmp_1476395024 = tree_637534986(189, []);
-    add_637534923(tmp_1476395024, text_637535038(makeNimstrLit("Repos \xF0\x9F\x93\x9A")));
-    add_637534923(tmp_1476395023, tmp_1476395024);
-    var tmp_1476395025 = tree_637534986(189, []);
-    add_637534923(tmp_1476395025, text_637535038(makeNimstrLit("Stars \xF0\x9F\x8C\x9F")));
-    add_637534923(tmp_1476395023, tmp_1476395025);
-    var tmp_1476395026 = tree_637534986(189, []);
-    add_637534923(tmp_1476395026, text_637535038(makeNimstrLit("Commits \xF0\x9F\x96\x8A\xEF\xB8\x8F")));
-    add_637534923(tmp_1476395023, tmp_1476395026);
-    add_637534923(tmp_1476395020, tmp_1476395023);
-    var tmp_1476395027 = tree_637534986(187, []);
-    var tmp_1476395028 = tree_637534986(188, []);
-    add_637534923(tmp_1476395028, text_637535038(strConv_1493172225(host_1476395018.repos)));
-    add_637534923(tmp_1476395027, tmp_1476395028);
-    var tmp_1476395029 = tree_637534986(188, []);
-    add_637534923(tmp_1476395029, text_637535038(HEX24_335544323(host_1476395018.stars)));
-    add_637534923(tmp_1476395027, tmp_1476395029);
-    var tmp_1476395030 = tree_637534986(188, []);
-    add_637534923(tmp_1476395030, text_637535038(HEX24_335544323(host_1476395018.commits)));
-    add_637534923(tmp_1476395027, tmp_1476395030);
-    add_637534923(tmp_1476395020, tmp_1476395027);
-    result_1476395019 = tmp_1476395020;
-
-  return result_1476395019;
-
-}
-
-function stats_1476395040(hosts_1476395041) {
-  var result_1476395042 = null;
-
-    var tmp_1476395043 = tree_637534986(44, []);
-    tmp_1476395043.class = "container";
-    var tmp_1476395044 = tree_637534986(42, []);
+    tmp_1426063395.class = "container";
+    var tmp_1426063396 = tree_637534986(42, []);
     Label1: do {
-      var host_1476395058 = ({name: [], repos: [], stars: 0, commits: 0});
-      var i_469762181 = 0;
+      var host_1426063410 = ({name: [], repos: [], stars: 0, commits: 0});
+      var i_469762177 = 0;
       Label2: do {
           Label3: while (true) {
-          if (!(i_469762181 < (hosts_1476395041).length)) break Label3;
-            host_1476395058 = hosts_1476395041[chckIndx(i_469762181, 0, (hosts_1476395041).length - 1)];
-            var tmp_1476395045 = tree_637534986(180, []);
-            add_637534923(tmp_1476395045, hostStats_1476395017(host_1476395058));
-            add_637534923(tmp_1476395044, tmp_1476395045);
-            i_469762181 = addInt(i_469762181, 1);
+          if (!(i_469762177 < (hosts_1426063393).length)) break Label3;
+            host_1426063410 = hosts_1426063393[chckIndx(i_469762177, 0, (hosts_1426063393).length - 1)];
+            var tmp_1426063397 = tree_637534986(180, []);
+            add_637534923(tmp_1426063397, hostStats_1426063369(host_1426063410));
+            add_637534923(tmp_1426063396, tmp_1426063397);
+            i_469762177 = addInt(i_469762177, 1);
           }
       } while (false);
     } while (false);
-    add_637534923(tmp_1476395043, tmp_1476395044);
-    result_1476395042 = tmp_1476395043;
+    add_637534923(tmp_1426063395, tmp_1426063396);
+    result_1426063394 = tmp_1426063395;
 
-  return result_1476395042;
+  return result_1426063394;
 
 }
 
-function makeFooter_1543503903() {
-  var result_1543503904 = null;
+function makeFooter_1493172255() {
+  var result_1493172256 = null;
 
-    var tmp_1543503905 = tree_637534986(29, []);
-    var tmp_1543503906 = tree_637534986(18, []);
-    tmp_1543503906.class = "container";
+    var tmp_1493172257 = tree_637534986(29, []);
+    var tmp_1493172258 = tree_637534986(18, []);
+    tmp_1493172258.class = "container";
     Label1: do {
-      var medium_1543503935 = {Field0: [], Field1: []};
-      var i_469762185 = 0;
-      var L_469762186 = (media_1543503880[0]).length;
+      var medium_1493172287 = {Field0: [], Field1: []};
+      var i_469762181 = 0;
+      var L_469762182 = (media_1493172232[0]).length;
       Label2: do {
           Label3: while (true) {
-          if (!(i_469762185 < L_469762186)) break Label3;
-            medium_1543503935 = media_1543503880[0][chckIndx(i_469762185, 0, (media_1543503880[0]).length - 1)];
-            var image_1543503936 = (makeNimstrLit("static/images/") || []).concat(medium_1543503935.Field0 || [],makeNimstrLit(".svg") || []);
-            var tmp_1543503907 = tree_637534986(45, []);
-            setAttr_637534849(tmp_1543503907, "href", toJSStr(medium_1543503935.Field1));
-            tmp_1543503907.class = "footer-link";
-            setAttr_637534849(tmp_1543503907, "aria-label", "breadcrumb");
-            var tmp_1543503908 = tree_637534986(76, []);
-            setAttr_637534849(tmp_1543503908, "src", toJSStr(image_1543503936));
-            tmp_1543503908.class = "footer-img";
-            add_637534923(tmp_1543503907, tmp_1543503908);
-            add_637534923(tmp_1543503906, tmp_1543503907);
-            i_469762185 = addInt(i_469762185, 1);
-            if (!(((media_1543503880[0]).length == L_469762186))) {
+          if (!(i_469762181 < L_469762182)) break Label3;
+            medium_1493172287 = media_1493172232[0][chckIndx(i_469762181, 0, (media_1493172232[0]).length - 1)];
+            var image_1493172288 = (makeNimstrLit("static/images/") || []).concat(medium_1493172287.Field0 || [],makeNimstrLit(".svg") || []);
+            var tmp_1493172259 = tree_637534986(45, []);
+            setAttr_637534849(tmp_1493172259, "href", toJSStr(medium_1493172287.Field1));
+            tmp_1493172259.class = "footer-link";
+            setAttr_637534849(tmp_1493172259, "aria-label", "breadcrumb");
+            var tmp_1493172260 = tree_637534986(76, []);
+            setAttr_637534849(tmp_1493172260, "src", toJSStr(image_1493172288));
+            tmp_1493172260.class = "footer-img";
+            add_637534923(tmp_1493172259, tmp_1493172260);
+            add_637534923(tmp_1493172258, tmp_1493172259);
+            i_469762181 = addInt(i_469762181, 1);
+            if (!(((media_1493172232[0]).length == L_469762182))) {
             failedAssertImpl_218103864(makeNimstrLit("iterators.nim(240, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
           }
       } while (false);
     } while (false);
-    add_637534923(tmp_1543503905, tmp_1543503906);
-    var tmp_1543503909 = tree_637534986(44, []);
-    tmp_1543503909.class = "container";
-    var tmp_1543503910 = tree_637534986(33, []);
-    add_637534923(tmp_1543503909, tmp_1543503910);
-    var tmp_1543503911 = tree_637534986(32, []);
-    add_637534923(tmp_1543503911, text_637535038(makeNimstrLit("This site is licensed under the ")));
-    var tmp_1543503912 = tree_637534986(45, []);
-    tmp_1543503912.class = "reference external";
-    setAttr_637534849(tmp_1543503912, "href", "https://www.mozilla.org/en-US/MPL/2.0/");
-    add_637534923(tmp_1543503912, text_637535038(makeNimstrLit("Mozilla Public License ")));
-    add_637534923(tmp_1543503911, tmp_1543503912);
-    add_637534923(tmp_1543503911, text_637535038(makeNimstrLit(" You can find the source code ")));
-    var tmp_1543503913 = tree_637534986(45, []);
-    tmp_1543503913.class = "reference external";
-    setAttr_637534849(tmp_1543503913, "href", "https://github.com/Diogenesoftoronto/nimdude");
-    add_637534923(tmp_1543503913, text_637535038(makeNimstrLit("here.")));
-    add_637534923(tmp_1543503911, tmp_1543503913);
-    add_637534923(tmp_1543503909, tmp_1543503911);
-    add_637534923(tmp_1543503905, tmp_1543503909);
-    result_1543503904 = tmp_1543503905;
+    add_637534923(tmp_1493172257, tmp_1493172258);
+    var tmp_1493172261 = tree_637534986(44, []);
+    tmp_1493172261.class = "container";
+    var tmp_1493172262 = tree_637534986(33, []);
+    add_637534923(tmp_1493172261, tmp_1493172262);
+    var tmp_1493172263 = tree_637534986(32, []);
+    add_637534923(tmp_1493172263, text_637535038(makeNimstrLit("This site is licensed under the ")));
+    var tmp_1493172264 = tree_637534986(45, []);
+    tmp_1493172264.class = "reference external";
+    setAttr_637534849(tmp_1493172264, "href", "https://www.mozilla.org/en-US/MPL/2.0/");
+    add_637534923(tmp_1493172264, text_637535038(makeNimstrLit("Mozilla Public License ")));
+    add_637534923(tmp_1493172263, tmp_1493172264);
+    add_637534923(tmp_1493172263, text_637535038(makeNimstrLit(" You can find the source code ")));
+    var tmp_1493172265 = tree_637534986(45, []);
+    tmp_1493172265.class = "reference external";
+    setAttr_637534849(tmp_1493172265, "href", "https://github.com/Diogenesoftoronto/nimdude");
+    add_637534923(tmp_1493172265, text_637535038(makeNimstrLit("here.")));
+    add_637534923(tmp_1493172263, tmp_1493172265);
+    add_637534923(tmp_1493172261, tmp_1493172263);
+    add_637534923(tmp_1493172257, tmp_1493172261);
+    result_1493172256 = tmp_1493172257;
 
-  return result_1543503904;
+  return result_1493172256;
 
 }
 
@@ -3584,30 +3567,30 @@ function Router_1275068462(data_1275068463) {
     tmp_1275068465.class = "portfolio-wrapper";
     var tmp_1275068466 = tree_637534986(17, []);
     tmp_1275068466.class = "portfolio";
-    add_637534923(tmp_1275068466, makeNavigation_1526726662(data_1275068463));
+    add_637534923(tmp_1275068466, makeNavigation_1476395014(data_1275068463));
     switch (show_1275068443[0]) {
     case 0:
       Temporary1 = index_1325400067();
       break;
     case 1:
-      Temporary1 = Articles_1342177286();
+      Temporary1 = Articles_1342177284();
       break;
     case 2:
-      Temporary1 = about_1409286147();
+      Temporary1 = about_1358954499();
       break;
     case 3:
-      Temporary1 = contact_1426063374();
+      Temporary1 = contact_1375731726();
       break;
     case 4:
-      Temporary1 = projects_1459617795();
+      Temporary1 = projects_1409286147();
       break;
     case 5:
-      Temporary1 = stats_1476395040([nimCopy(null, Github_1275068428[0], NTI1476395011)]);
+      Temporary1 = stats_1426063392([nimCopy(null, Github_1275068428[0], NTI1426063363)]);
       break;
     }
     var route_1275068467 = Temporary1;
     add_637534923(tmp_1275068466, route_1275068467);
-    add_637534923(tmp_1275068466, makeFooter_1543503903());
+    add_637534923(tmp_1275068466, makeFooter_1493172255());
     add_637534923(tmp_1275068465, tmp_1275068466);
     result_1275068464 = tmp_1275068465;
 
