@@ -32,7 +32,7 @@ proc Router*(data: RouterData): VNode =
       makeNavigation(data)
       let route = case show:
         of rindex: index.index()
-        of rarticles: articles.articles()
+        of rarticles: articles.Articles()
         of rabout: about.about()
         of rcontact: contact.contact()
         of rprojects: projects.projects()
