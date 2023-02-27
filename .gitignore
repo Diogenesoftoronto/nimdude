@@ -1,9 +1,9 @@
 .env
-static/
+
 TODO
 .vscode
-*.js
+
 build
-.js
+
 *.out.css
 htmldocs/
