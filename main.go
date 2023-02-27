@@ -30,9 +30,6 @@ func Index(w http.ResponseWriter, r *http.Request) {
 	}{
 		Title: "Index Page",
 	}
-	log.Printf("Request: %v\n", r)
-	log.Printf("Request URL: %s", r.RequestURI)
-	// if request is for a file check the mime type
 	// Get the file extension from the URL
 	// Get the MIME type for the file extension
 	if strings.Contains(r.RequestURI, ".js") {
@@ -60,7 +57,6 @@ func Index(w http.ResponseWriter, r *http.Request) {
 func serveJs(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/javascript")
 	http.StripPrefix("/js/", http.FileServer(http.Dir("public/js/"))).ServeHTTP(w, r)
-	log.Printf("Request Header: %s\n", w.Header())
 }
 
 func startServer(c Config) {
