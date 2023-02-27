@@ -37,7 +37,7 @@ I built this site because I was having major issues working with the vugu librar
 
 ## Features
 
-- Custom Cyberpunk Theme: The site features a unique and immersive cyberpunk theme, with a focus on incorporating futuristic and glitchy elements inspired by classic 80's video games.
+- Custom Cyberpunk Theme: The site features a unique and immersive cyberpunk theme, with a focus on incorporating futuristic and glitchy elements inspired by classic 80's video games.__WIP__
 - Search Component: The site includes a powerful search component that allows visitors to quickly find specific content on the site.
 - Hero Section: The hero section is a visually impactful area at the top of the site that immediately captures the attention of visitors and highlights key information about me and my skills.
 - About Section: The about section provides visitors with a brief overview of my background and experience as a software engineer.
@@ -77,6 +77,14 @@ go mod tidy
 go run main.go
 ```
 
+Alternatively, the project can be built using main, this builds a docker container as well and automagically launches the server. 
+
+_This is the preferred method of running the project._
+
+```sh
+go run main.go -build
+```
+
 ### Installation from Docker
 
 You'll need to install Docker. Then you can run the following commands:
@@ -108,7 +116,7 @@ If you have any questions or comments about Nimdude, please feel free to contact
 
 ## Contributing
 
-You're crazy if you want to contribute to Nimdude, but if you're feeling extra spicy and want to jump in, go ahead and open a PR. Just know that we have a strict "no clowns allowed" policy.
+You're crazy if you want to contribute to Nimdude, but if you're feeling extra spicy and want to jump in, go ahead and open a PR. Just know that we have a strict "no clowns allowed" policy. Head to the [TODO.md](TODO.md) file for a list of things that need to be done.
 
 If you're brave enough to contribute, here are some tips:
 
