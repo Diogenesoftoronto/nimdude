@@ -1,3 +1,6 @@
+const Routes* = ["about", "contact", "projects", "stats", "articles"]
+
+
 const CountriesRaw* = """Afghanistan
 Albania
 Algeria
