@@ -2,11 +2,6 @@
 var framePtr = null;
 var excHandler = 0;
 var lastJSError = null;
-var NTI33555132 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
-var NTI33555114 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
-var NTI33555115 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
-var NTI1375731721 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
-var NTI1358954516 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI637534477 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI603979783 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI687865892 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
@@ -996,20 +991,6 @@ var NNI603979783 = {kind: 2, len: 3, offset: 0, typ: null, name: null, sons: [{k
 {kind: 1, offset: "pos", len: 0, typ: NTI33554456, name: "pos", sons: null}]};
 NTI603979783.node = NNI603979783;
 NTI637534477.base = NTI33554440;
-var NNI1358954516 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
-NTI1358954516.node = NNI1358954516;
-NTI1358954516.base = NTI33555113;
-var NNI1375731721 = {kind: 1, offset: "val", len: 0, typ: NTI637534307, name: "val", sons: null};
-NTI1375731721.node = NNI1375731721;
-var NNI33555115 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
-NTI33555115.node = NNI33555115;
-var NNI33555114 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
-NTI33555114.node = NNI33555114;
-NTI33555114.base = NTI33555112;
-NTI33555115.base = NTI33555114;
-var NNI33555132 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
-NTI33555132.node = NNI33555132;
-NTI33555132.base = NTI33555113;
 
 function makeNimstrLit(c_33556801) {
       var result = [];
@@ -1357,54 +1338,6 @@ function nimMax(a_33556998, b_33556999) {
 
   return result_33557000;
 
-}
-
-function isObj(obj_33557238, subclass_33557239) {
-  var result_33557240 = false;
-
-  BeforeRet: do {
-    var x_33557241 = obj_33557238;
-    if ((x_33557241 == subclass_33557239)) {
-    result_33557240 = true;
-    break BeforeRet;
-    }
-    
-    Label1: do {
-        Label2: while (true) {
-        if (!!((x_33557241 == subclass_33557239))) break Label2;
-          if ((x_33557241 == null)) {
-          result_33557240 = false;
-          break BeforeRet;
-          }
-          
-          x_33557241 = x_33557241.base;
-        }
-    } while (false);
-    result_33557240 = true;
-    break BeforeRet;
-  } while (false);
-
-  return result_33557240;
-
-}
-
-function reraiseException() {
-    if ((lastJSError == null)) {
-    raiseException({message: makeNimstrLit("no exception to reraise"), parent: null, m_type: NTI33555132, name: null, trace: [], up: null}, "ReraiseDefect");
-    }
-    else {
-      if ((excHandler == 0)) {
-      if (isNimException_33556519()) {
-      unhandledException(lastJSError);
-      }
-      
-      }
-      
-      throw lastJSError;
-    }
-    
-
-  
 }
             var Countries_1426063373 = [makeNimstrLit("Afghanistan"), makeNimstrLit("Albania"), makeNimstrLit("Algeria"), makeNimstrLit("Andorra"), makeNimstrLit("Angola"), makeNimstrLit("Antigua & Deps"), makeNimstrLit("Argentina"), makeNimstrLit("Armenia"), makeNimstrLit("Australia"), makeNimstrLit("Austria"), makeNimstrLit("Azerbaijan"), makeNimstrLit("Bahamas"), makeNimstrLit("Bahrain"), makeNimstrLit("Bangladesh"), makeNimstrLit("Barbados"), makeNimstrLit("Belarus"), makeNimstrLit("Belgium"), makeNimstrLit("Belize"), makeNimstrLit("Benin"), makeNimstrLit("Bhutan"), makeNimstrLit("Bolivia"), makeNimstrLit("Bosnia Herzegovina"), makeNimstrLit("Botswana"), makeNimstrLit("Brazil"), makeNimstrLit("Brunei"), makeNimstrLit("Bulgaria"), makeNimstrLit("Burkina"), makeNimstrLit("Burundi"), makeNimstrLit("Cambodia"), makeNimstrLit("Cameroon"), makeNimstrLit("Canada"), makeNimstrLit("Cape Verde"), makeNimstrLit("Central African Rep"), makeNimstrLit("Chad"), makeNimstrLit("Chile"), makeNimstrLit("China"), makeNimstrLit("Colombia"), makeNimstrLit("Comoros"), makeNimstrLit("Congo"), makeNimstrLit("Congo {Democratic Rep}"), makeNimstrLit("Costa Rica"), makeNimstrLit("Croatia"), makeNimstrLit("Cuba"), makeNimstrLit("Cyprus"), makeNimstrLit("Czech Republic"), makeNimstrLit("Denmark"), makeNimstrLit("Djibouti"), makeNimstrLit("Dominica"), makeNimstrLit("Dominican Republic"), makeNimstrLit("East Timor"), makeNimstrLit("Ecuador"), makeNimstrLit("Egypt"), makeNimstrLit("El Salvador"), makeNimstrLit("Equatorial Guinea"), makeNimstrLit("Eritrea"), makeNimstrLit("Estonia"), makeNimstrLit("Ethiopia"), makeNimstrLit("Fiji"), makeNimstrLit("Finland"), makeNimstrLit("France"), makeNimstrLit("Gabon"), makeNimstrLit("Gambia"), makeNimstrLit("Georgia"), makeNimstrLit("Germany"), makeNimstrLit("Ghana"), makeNimstrLit("Greece"), makeNimstrLit("Grenada"), makeNimstrLit("Guatemala"), makeNimstrLit("Guinea"), makeNimstrLit("Guinea-Bissau"), makeNimstrLit("Guyana"), makeNimstrLit("Haiti"), makeNimstrLit("Honduras"), makeNimstrLit("Hungary"), makeNimstrLit("Iceland"), makeNimstrLit("India"), makeNimstrLit("Indonesia"), makeNimstrLit("Iran"), makeNimstrLit("Iraq"), makeNimstrLit("Ireland {Republic}"), makeNimstrLit("Israel"), makeNimstrLit("Italy"), makeNimstrLit("Ivory Coast"), makeNimstrLit("Jamaica"), makeNimstrLit("Japan"), makeNimstrLit("Jordan"), makeNimstrLit("Kazakhstan"), makeNimstrLit("Kenya"), makeNimstrLit("Kiribati"), makeNimstrLit("Korea North"), makeNimstrLit("Korea South"), makeNimstrLit("Kosovo"), makeNimstrLit("Kuwait"), makeNimstrLit("Kyrgyzstan"), makeNimstrLit("Laos"), makeNimstrLit("Latvia"), makeNimstrLit("Lebanon"), makeNimstrLit("Lesotho"), makeNimstrLit("Liberia"), makeNimstrLit("Libya"), makeNimstrLit("Liechtenstein"), makeNimstrLit("Lithuania"), makeNimstrLit("Luxembourg"), makeNimstrLit("Macedonia"), makeNimstrLit("Madagascar"), makeNimstrLit("Malawi"), makeNimstrLit("Malaysia"), makeNimstrLit("Maldives"), makeNimstrLit("Mali"), makeNimstrLit("Malta"), makeNimstrLit("Marshall Islands"), makeNimstrLit("Mauritania"), makeNimstrLit("Mauritius"), makeNimstrLit("Mexico"), makeNimstrLit("Micronesia"), makeNimstrLit("Moldova"), makeNimstrLit("Monaco"), makeNimstrLit("Mongolia"), makeNimstrLit("Montenegro"), makeNimstrLit("Morocco"), makeNimstrLit("Mozambique"), makeNimstrLit("Myanmar, {Burma}"), makeNimstrLit("Namibia"), makeNimstrLit("Nauru"), makeNimstrLit("Nepal"), makeNimstrLit("Netherlands"), makeNimstrLit("New Zealand"), makeNimstrLit("Nicaragua"), makeNimstrLit("Niger"), makeNimstrLit("Nigeria"), makeNimstrLit("Norway"), makeNimstrLit("Oman"), makeNimstrLit("Pakistan"), makeNimstrLit("Palau"), makeNimstrLit("Panama"), makeNimstrLit("Papua New Guinea"), makeNimstrLit("Paraguay"), makeNimstrLit("Peru"), makeNimstrLit("Philippines"), makeNimstrLit("Poland"), makeNimstrLit("Portugal"), makeNimstrLit("Qatar"), makeNimstrLit("Romania"), makeNimstrLit("Russian Federation"), makeNimstrLit("Rwanda"), makeNimstrLit("St Kitts & Nevis"), makeNimstrLit("St Lucia"), makeNimstrLit("Saint Vincent & the Grenadines"), makeNimstrLit("Samoa"), makeNimstrLit("San Marino"), makeNimstrLit("Sao Tome & Principe"), makeNimstrLit("Saudi Arabia"), makeNimstrLit("Senegal"), makeNimstrLit("Serbia"), makeNimstrLit("Seychelles"), makeNimstrLit("Sierra Leone"), makeNimstrLit("Singapore"), makeNimstrLit("Slovakia"), makeNimstrLit("Slovenia"), makeNimstrLit("Solomon Islands"), makeNimstrLit("Somalia"), makeNimstrLit("South Africa"), makeNimstrLit("South Sudan"), makeNimstrLit("Spain"), makeNimstrLit("Sri Lanka"), makeNimstrLit("Sudan"), makeNimstrLit("Suriname"), makeNimstrLit("Swaziland"), makeNimstrLit("Sweden"), makeNimstrLit("Switzerland"), makeNimstrLit("Syria"), makeNimstrLit("Taiwan"), makeNimstrLit("Tajikistan"), makeNimstrLit("Tanzania"), makeNimstrLit("Thailand"), makeNimstrLit("Togo"), makeNimstrLit("Tonga"), makeNimstrLit("Trinidad & Tobago"), makeNimstrLit("Tunisia"), makeNimstrLit("Turkey"), makeNimstrLit("Turkmenistan"), makeNimstrLit("Tuvalu"), makeNimstrLit("Uganda"), makeNimstrLit("Ukraine"), makeNimstrLit("United Arab Emirates"), makeNimstrLit("United Kingdom"), makeNimstrLit("United States"), makeNimstrLit("Uruguay"), makeNimstrLit("Uzbekistan"), makeNimstrLit("Vanuatu"), makeNimstrLit("Vatican City"), makeNimstrLit("Venezuela"), makeNimstrLit("Vietnam"), makeNimstrLit("Yemen"), makeNimstrLit("Zambia"), makeNimstrLit("Zimbabwe")];
 if (!Math.trunc) {
@@ -3133,90 +3066,12 @@ function index_1325400067() {
 
 }
 
-function isNone_1342177356(self_1342177358) {
-  var result_1342177359 = false;
-
-    result_1342177359 = (self_1342177358.val == null);
-
-  return result_1342177359;
-
-}
-
-function get_1342177348(self_1342177350) {
-  var result_1342177351 = null;
-
-    if (isNone_1342177356(self_1342177350)) {
-    raiseException({message: makeNimstrLit("Can\'t obtain a value from a `none`"), parent: null, m_type: NTI1358954516, name: null, trace: [], up: null}, "UnpackDefect");
-    }
-    
-    result_1342177351 = self_1342177350["val"];
-
-  return result_1342177351;
-
-}
-
-function some_1375731722(val_1375731724) {
-  var result_1375731725 = ({val: null});
-
-    if (!(!((val_1375731724 == null)))) {
-    failedAssertImpl_218103864(makeNimstrLit("options.nim(133, 5) `not val.isNil` "));
-    }
-    
-    result_1375731725.val = val_1375731724;
-
-  return result_1375731725;
-
-}
-
 function verbatim_637535044(s_637535045) {
   var result_637535046 = null;
 
     result_637535046 = {kind: 6, text: toJSStr(s_637535045), index: -1, m_type: NTI637534310, id: null, class: null, kids: [], attrs: [], events: [], style: null, dom: null};
 
   return result_637535046;
-
-}
-
-function none_1375731735() {
-  var result_1375731741 = ({val: null});
-
-  return result_1375731741;
-
-}
-
-function isNimException_33556519() {
-    return lastJSError && lastJSError.m_type;
-
-  
-}
-
-function Article_1375731715(article_1375731716) {
-    var Temporary2;
-
-  var result_1375731721 = ({val: null});
-
-++excHandler;
-    Temporary2 = framePtr;
-    try {
-    result_1375731721 = nimCopy(result_1375731721, some_1375731722(verbatim_637535044(article_1375731716)), NTI1375731721);
---excHandler;
-} catch (EXCEPTION) {
- var prevJSError = lastJSError;
- lastJSError = EXCEPTION;
- --excHandler;
-    framePtr = Temporary2;
-    if (lastJSError && (isObj(lastJSError.m_type, NTI33555115))) {
-    result_1375731721 = nimCopy(result_1375731721, none_1375731735(), NTI1375731721);
-    }
-    else {
-    	reraiseException();
-    }
-    lastJSError = prevJSError;
-    } finally {
-    framePtr = Temporary2;
-    }
-
-  return result_1375731721;
 
 }
 
@@ -3234,7 +3089,7 @@ function Articles_1342177286() {
           if (!true) break Label3;
             __1342177334 = i_469762172;
             article_1342177335 = articles_1342177285[0][chckIndx(i_469762172, 0, (articles_1342177285[0]).length - 1)];
-            add_637534923(tmp_1342177288, get_1342177348(Article_1375731715(article_1342177335)));
+            add_637534923(tmp_1342177288, verbatim_637535044(article_1342177335));
             if ((0 <= i_469762172)) {
             break Label2;
             }
@@ -3478,19 +3333,19 @@ function contact_1426063374() {
     setAttr_637534849(tmp_1426063392, "name", "country");
     Label1: do {
       var country_1426063431 = [];
-      var i_469762177 = 0;
-      var L_469762178 = 196;
+      var i_469762176 = 0;
+      var L_469762177 = 196;
       Label2: do {
           Label3: while (true) {
-          if (!(i_469762177 < L_469762178)) break Label3;
-            country_1426063431 = Countries_1426063373[chckIndx(i_469762177, 0, (Countries_1426063373).length - 1)];
+          if (!(i_469762176 < L_469762177)) break Label3;
+            country_1426063431 = Countries_1426063373[chckIndx(i_469762176, 0, (Countries_1426063373).length - 1)];
             var tmp_1426063393 = tree_637534986(199, []);
             valueHEX3D_637534627(tmp_1426063393, toJSStr(country_1426063431));
             setAttr_637534849(tmp_1426063393, "value", toJSStr(country_1426063431));
             add_637534923(tmp_1426063393, text_637535038(country_1426063431));
             add_637534923(tmp_1426063392, tmp_1426063393);
-            i_469762177 = addInt(i_469762177, 1);
-            if (!((196 == L_469762178))) {
+            i_469762176 = addInt(i_469762176, 1);
+            if (!((196 == L_469762177))) {
             failedAssertImpl_218103864(makeNimstrLit("iterators.nim(240, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
@@ -3619,15 +3474,15 @@ function stats_1476395040(hosts_1476395041) {
     var tmp_1476395044 = tree_637534986(42, []);
     Label1: do {
       var host_1476395058 = ({name: [], repos: [], stars: 0, commits: 0});
-      var i_469762182 = 0;
+      var i_469762181 = 0;
       Label2: do {
           Label3: while (true) {
-          if (!(i_469762182 < (hosts_1476395041).length)) break Label3;
-            host_1476395058 = hosts_1476395041[chckIndx(i_469762182, 0, (hosts_1476395041).length - 1)];
+          if (!(i_469762181 < (hosts_1476395041).length)) break Label3;
+            host_1476395058 = hosts_1476395041[chckIndx(i_469762181, 0, (hosts_1476395041).length - 1)];
             var tmp_1476395045 = tree_637534986(180, []);
             add_637534923(tmp_1476395045, hostStats_1476395017(host_1476395058));
             add_637534923(tmp_1476395044, tmp_1476395045);
-            i_469762182 = addInt(i_469762182, 1);
+            i_469762181 = addInt(i_469762181, 1);
           }
       } while (false);
     } while (false);
@@ -3646,12 +3501,12 @@ function makeFooter_1543503903() {
     tmp_1543503906.class = "container";
     Label1: do {
       var medium_1543503935 = {Field0: [], Field1: []};
-      var i_469762186 = 0;
-      var L_469762187 = (media_1543503880[0]).length;
+      var i_469762185 = 0;
+      var L_469762186 = (media_1543503880[0]).length;
       Label2: do {
           Label3: while (true) {
-          if (!(i_469762186 < L_469762187)) break Label3;
-            medium_1543503935 = media_1543503880[0][chckIndx(i_469762186, 0, (media_1543503880[0]).length - 1)];
+          if (!(i_469762185 < L_469762186)) break Label3;
+            medium_1543503935 = media_1543503880[0][chckIndx(i_469762185, 0, (media_1543503880[0]).length - 1)];
             var image_1543503936 = (makeNimstrLit("static/images/") || []).concat(medium_1543503935.Field0 || [],makeNimstrLit(".svg") || []);
             var tmp_1543503907 = tree_637534986(45, []);
             setAttr_637534849(tmp_1543503907, "href", toJSStr(medium_1543503935.Field1));
@@ -3662,8 +3517,8 @@ function makeFooter_1543503903() {
             tmp_1543503908.class = "footer-img";
             add_637534923(tmp_1543503907, tmp_1543503908);
             add_637534923(tmp_1543503906, tmp_1543503907);
-            i_469762186 = addInt(i_469762186, 1);
-            if (!(((media_1543503880[0]).length == L_469762187))) {
+            i_469762185 = addInt(i_469762185, 1);
+            if (!(((media_1543503880[0]).length == L_469762186))) {
             failedAssertImpl_218103864(makeNimstrLit("iterators.nim(240, 11) `len(a) == L` the length of the seq changed while iterating over it"));
             }
             
