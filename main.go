@@ -48,21 +48,19 @@ func Index(w http.ResponseWriter, r *http.Request) {
 	} else if strings.Contains(r.RequestURI, ".ico") {
 		w.Header().Set("Content-Type", "image/x-icon")
 	}
-	// Set the Content-Type header to the MIME type
-	// w.Header().Set("Content-Type", mimeType.String())
 
 	err := tmpls.ExecuteTemplate(w, "index.html", data)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		log.Fatalf("error executing template: %s", err)
 	}
-
 }
 
 // add detect mimetypes for js files
 func serveJs(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/javascript")
 	http.StripPrefix("/js/", http.FileServer(http.Dir("public/js/"))).ServeHTTP(w, r)
+	log.Printf("Request Header: %s\n", w.Header())
 }
 
 func startServer(c Config) {
@@ -77,6 +75,7 @@ func startServer(c Config) {
 	if c.Port == "" {
 		c.Port = port
 	}
+	
 	if port == "" {
 		var ok bool
 		c.Port, ok = os.LookupEnv("PORT")
@@ -84,6 +83,7 @@ func startServer(c Config) {
 			c.Port = "9090"
 		}
 	}
+
 	debug := confEnvVariable("debug", &c.File)
 	if !c.Debug && debug == "" {
 		c.Debug = false
@@ -184,7 +184,7 @@ func build() error {
 	}
 
 	// Build the application
-	if err := exec.Command("nim", "js", "-o:./public/js/app.js", "./frontend/app.nim").Run(); err != nil {
+	if err := exec.Command("nim", "js", "-d:size",  "-o:./public/js/app.js", "./frontend/app.nim").Run(); err != nil {
 		return fmt.Errorf("error building application: %v", err)
 	}
 
