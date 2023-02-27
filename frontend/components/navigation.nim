@@ -1,7 +1,7 @@
 import karax / [karax, karaxdsl, vdom]
-import strutils
+import std/strutils
 
-var Routes = ["about", "contact", "projects", "stats", "articles"]
+import ../constants
 
 proc makeNavigation*(data: RouterData): VNode =
     result = buildHtml(nav(class="container-fluid")):
