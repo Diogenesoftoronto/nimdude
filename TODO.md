@@ -6,7 +6,7 @@ I will migrate to issues on github soon. Just using this for now.
 ## High Priority
 
 - [x] Add a way to detect mime types for files and then serve them with the correct content type
-- [ ] Fix navigation bar to be responsive, add a hamburger menu for mobile
+- [x] Fix navigation bar to be responsive, add a hamburger menu for mobile
 - [ ] Process requests from the contact form
 - [ ] Add not found page and use the encore server to serve it
 - [ ] Add these todos as issues on github
@@ -15,6 +15,7 @@ I will migrate to issues on github soon. Just using this for now.
 
 - [ ] Write a script to convert Markdown and reStructuredText files to partial HTML files for Karax
 - [ ] Add any necessary logic to the partials to properly render them in Karax
+- [ ] Add meeting option for calendly (link or something)
 
 ## Low Priority
 
@@ -30,3 +31,4 @@ I will migrate to issues on github soon. Just using this for now.
 - [ ] Add a custom flavicon
 - [ ] Add a way to integrate with google analytics
 - [ ] Add a way to integrate discord
+- [ ] Add animation to hamburger menu
