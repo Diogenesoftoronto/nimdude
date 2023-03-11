@@ -85,6 +85,8 @@ _This is the preferred method of running the project._
 go run main.go -build
 ```
 
+*NOTE: this does not work as expected. The expectation is that this creates the build of the server and then runs the built binary... or that it rebuilds and runs the binary again.
+This is a good base for adding a hotreload functionality later. I want to figure out how to do that hahah.
 ### Installation from Docker
 
 You'll need to install Docker. Then you can run the following commands:
